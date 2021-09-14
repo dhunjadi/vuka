@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 export default function LoginPage() {
   
-  const {userList} = useContext(UserContext)
+  const {userList, setLoggedInUser} = useContext(UserContext)
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [showError, setShowError] = useState(false)
@@ -13,12 +13,15 @@ export default function LoginPage() {
 
   const handleLogin = (e) =>{
     e.preventDefault()
-    if(userList.find(user => user.email === email && user.password === password)){
+    const found = (userList.find(user => user.email === email && user.password === password))
+    if(found){
+      setLoggedInUser(found)
       history.push('/welcome')
     } else{
       setShowError(true)
     }
-  }
+ 
+  } 
 
   if (showError && email.length === 0) {
     setShowError(false);

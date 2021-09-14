@@ -27,8 +27,10 @@ export const UserContextProvider = ({ children }) => {
     },
   ]);
 
+  const [loggedInUser, setLoggedInUser] = useState([])
+
   return (
-    <UserContext.Provider value={{ userList }}>
+    <UserContext.Provider value={{ userList, loggedInUser, setLoggedInUser }}>
         {children}
     </UserContext.Provider>
   );
