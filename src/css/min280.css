@@ -1,13 +1,5 @@
 @media screen and (min-width: 280px) {
 
-    #login-page{
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #4e0930;
-    }
     
     .logo-container{
         display: flex;
@@ -70,5 +62,109 @@
     .login-error{
         color: #eba904;
     }
+
+
+    /* NAVBAR  */
+
+    nav{
+        background-color: #4e0930;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 99;
+    }
+
+    .menu-list{
+        background-color: #870f54;
+        border-radius: 4px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        position: absolute;
+        padding: 20px 0;
+        right: 0;
+        top: 100px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .menu-list li img{
+        width: 5vh;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .menu-list li img:hover{
+        filter: invert(72%) sepia(52%) saturate(3458%) hue-rotate(5deg) brightness(100%) contrast(97%);
+    }
+
+    .menu-list.close{
+        right: -100%;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .menu-list li{
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-list li:last-child{
+        margin-bottom: 0px;
+    }
+
+    .menu-list li a{
+        text-decoration: none;
+        font-weight: 700;
+        padding: 5px 10px;
+        margin-left: 20px;
+        color: #eba904;        
+    }
+
+
+    .menu-list li a.active img{
+        filter: invert(72%) sepia(52%) saturate(3458%) hue-rotate(5deg) brightness(100%) contrast(97%);
+    }
+
+   
+    /* BURGER-MENU */
+
+    .menu-icon{
+        display: flex;
+        align-self: center;
+        color: #eba904;
+    }
+
+    .fas{
+        cursor: pointer;
+    }
+
+    .fa-times{
+        transform: rotate(360deg);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .fa-bars{
+        transform: rotate(180deg);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .logo-container-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .logo-container-nav img{
+        height: 9vh;
+        margin-right: 20px;
+    }
+
+
+
+
+
     
 }

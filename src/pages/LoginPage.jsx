@@ -16,7 +16,7 @@ export default function LoginPage() {
     const found = (userList.find(user => user.email === email && user.password === password))
     if(found){
       setLoggedInUser(found)
-      history.push('/welcome')
+      history.push('/home')
     } else{
       setShowError(true)
     }

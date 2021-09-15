@@ -8,6 +8,26 @@ body{
     box-sizing: border-box;
 }
 
+   /* PAGES */
+
+   #login-page{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4e0930;
+}
+
+   #home, #grades, #library, #schedule, #settings, #tasks{
+    height: 100vh;
+    background-color: #4e0930;
+    overflow-x: hidden;
+}
+
+h3{
+    color: #eba904;
+}
 
 
 
