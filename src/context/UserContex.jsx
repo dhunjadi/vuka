@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const UserContext = createContext();
 
@@ -27,11 +27,22 @@ export const UserContextProvider = ({ children }) => {
     },
   ]);
 
-  const [loggedInUser, setLoggedInUser] = useState([])
+  const [loggedInUser, setLoggedInUser] = useState([]);
+
+  useEffect(() => {
+    const data = localStorage.getItem("my-user");
+    if (data) {
+      setLoggedInUser(JSON.parse(data));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("my-user", JSON.stringify(loggedInUser));
+  });
 
   return (
     <UserContext.Provider value={{ userList, loggedInUser, setLoggedInUser }}>
-        {children}
+      {children}
     </UserContext.Provider>
   );
 };
