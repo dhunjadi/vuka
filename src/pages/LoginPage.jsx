@@ -30,7 +30,7 @@ export default function LoginPage() {
   return (
     <div id="login-page">
       <div className="login-container">
-        <div className="logo-container">
+        <div className="logo-container-login">
           <img src={logo} alt="logo" />
         </div>
         <form>

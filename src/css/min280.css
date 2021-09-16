@@ -1,14 +1,15 @@
 @media screen and (min-width: 280px) {
 
+    /* LOGIN PAGE */
     
-    .logo-container{
+    .logo-container-login{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     
-    .logo-container img{
+    .logo-container-login img{
         height: 30vh;
     }
     
@@ -91,6 +92,7 @@
     }
 
     .menu-list li img{
+        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(69deg) brightness(112%) contrast(117%);
         width: 5vh;
         transition: all 0.2s ease-in-out;
     }
@@ -133,7 +135,7 @@
     .menu-icon{
         display: flex;
         align-self: center;
-        color: #eba904;
+        color: white;
     }
 
     .fas{
@@ -149,6 +151,8 @@
         transform: rotate(180deg);
         transition: all 0.2s ease-in-out;
     }
+
+    /* NAV LOGO */
 
     .logo-container-nav{
         display: flex;
