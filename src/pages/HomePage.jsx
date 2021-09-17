@@ -33,6 +33,11 @@ export default function HomePage() {
           nextLabel={">"}
           pageCount={pageCount}
           onPageChange={handlePageChange}
+          containerClassName={"pagination-container"}
+          previousLinkClassName={"previous-btn"}
+          nextLinkClassName={"next-btn"}
+          disabledClassName={"pagination-disabled"}
+          activeClassName={"pagination-active"}
         />
       </div>
 
