@@ -93,7 +93,7 @@
 
   .menu-list li img {
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(69deg) brightness(112%) contrast(117%);
-    width: 6vh;
+    width: 4vh;
     transition: all 0.2s ease-in-out;
   }
 
