@@ -30,5 +30,10 @@ h1, h3{
     color: #eba904;
 }
 
+.active-news{
+    border: 2px solid #eba904;
+    border-radius: 10px;
+}
+
 
 
