@@ -250,6 +250,7 @@
     padding: 10px;
     border-radius: 10px;
     width: 100%;
+    transition: all 0.5s ease-in-out;
   }
 
   .task-card-btn {

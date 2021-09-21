@@ -35,5 +35,17 @@ h1, h3{
     border-radius: 10px;
 }
 
+.task-card-completed{
+    background-color: #a1a1a1
+  }
+
+  .task-card-completed h1{
+    color: black
+  }
+
+  .task-card-completed button{
+    background-color: #8f8f8f;
+    color: black
+  }
 
 

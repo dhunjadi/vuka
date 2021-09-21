@@ -10,7 +10,8 @@ export const UserContextProvider = ({ children }) => {
       fName: "Ivan",
       lName: "Ivanic",
       status: "student",
-      study: "hospitality"
+      study: "hospitality",
+      year: 2
     },
     {
       email: "mmarkovic@vuka.hr",
@@ -18,7 +19,8 @@ export const UserContextProvider = ({ children }) => {
       fName: "Marko",
       lName: "Markovic",
       status: "professor",
-      study: "professor"
+      study: "professor",
+      year: 3
     },
     {
       email: "admin@vuka.hr",
@@ -26,7 +28,8 @@ export const UserContextProvider = ({ children }) => {
       fName: "Admin",
       lName: "Adminic",
       status: "admin",
-      study: "admin"
+      study: "admin",
+      year: 5
     },
   ]);
 
