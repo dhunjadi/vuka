@@ -20,7 +20,9 @@ export default function TasksPage() {
     return (
         <div id='tasks'>
             <Navbar />
+            <div className="container">
             {displayTasks}
+            </div>
         </div>
     )
 }

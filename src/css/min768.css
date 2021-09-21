@@ -238,4 +238,24 @@
     color: #4e0930;
     background-color: white;
   }
+
+   /* TASK PAGE */
+
+  .task-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #870f54;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .task-card-btn {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 10px auto;
+  }
 }
