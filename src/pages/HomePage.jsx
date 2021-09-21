@@ -30,49 +30,59 @@ export default function HomePage() {
     setPageNumber(selected);
   };
 
-  return (
-    <div id="home">
-      <Navbar />
-      <div className="container">
-        <div className="news-type-container">
-          <div
-            className={
-              newstype === "general"
-                ? "news-general active-news"
-                : "news-general"
-            }
-            onClick={() => {
-              setNewsType("general");
-            }}
-          >
-            <h3>GENERAL</h3>
+  if (loggedInUser.length !== 0) {
+    return (
+      <div id="home">
+        <Navbar />
+        <div className="container">
+          <div className="news-type-container">
+            <div
+              className={
+                newstype === "general"
+                  ? "news-general active-news"
+                  : "news-general"
+              }
+              onClick={() => {
+                setNewsType("general");
+              }}
+            >
+              <h3>GENERAL</h3>
+            </div>
+            <div
+              className={
+                newstype === loggedInUser.study
+                  ? "news-study active-news"
+                  : "news-study"
+              }
+              onClick={() => {
+                setNewsType(loggedInUser.study);
+              }}
+            >
+              <h3>{loggedInUser.study.toUpperCase()}</h3>
+            </div>
           </div>
-          <div
-            className={
-              newstype === loggedInUser.study
-                ? "news-study active-news"
-                : "news-study"
-            }
-            onClick={() => {
-              setNewsType(loggedInUser.study);
-            }}
-          >
-            <h3>{loggedInUser.study.toUpperCase()}</h3>
-          </div>
+          {displayNews}
+          <ReactPaginate
+            previousLabel={"<"}
+            nextLabel={">"}
+            pageCount={pageCount}
+            onPageChange={handlePageChange}
+            containerClassName={"pagination-container"}
+            previousLinkClassName={"previous-btn"}
+            nextLinkClassName={"next-btn"}
+            disabledClassName={"pagination-disabled"}
+            activeClassName={"pagination-active"}
+          />
         </div>
-        {displayNews}
-        <ReactPaginate
-          previousLabel={"<"}
-          nextLabel={">"}
-          pageCount={pageCount}
-          onPageChange={handlePageChange}
-          containerClassName={"pagination-container"}
-          previousLinkClassName={"previous-btn"}
-          nextLinkClassName={"next-btn"}
-          disabledClassName={"pagination-disabled"}
-          activeClassName={"pagination-active"}
-        />
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div id="home">
+        <div className="container">
+          <h1>You need to log in to access this page</h1>
+        </div>
+      </div>
+    );
+  }
 }
