@@ -1,31 +1,25 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
-import axios from "axios";
 import BookCard from "../components/Library/BookCard";
+import bookList from "../components/Library/bookList";
 
 export default function LibraryPage() {
-  const apiKey = "AIzaSyAXI3E9DPOQNaxMGoStQp2JVaYY5NFQhnI";
-  const [serchText, setSearchText] = useState("");
-  const [results, setResults] = useState([]);
+  const [searchText, setSearchText] = useState("");
+  const [results] = useState(bookList);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    axios
-      .get(
-        "https://www.googleapis.com/books/v1/volumes?q=" +
-          serchText +
-          "&key=" +
-          apiKey
-      )
-      .then((res) => {
-        setResults(res.data.items);
-        console.log(results)
-      });
-  };
-
-  const displayBooks = results.map((bookCard) => {
-    return <BookCard key={bookCard.id} bookCard={bookCard}/>
-  });
+  const displayBooks = results
+    .filter((bookCard) => {
+      if (searchText === "") {
+        return bookCard;
+      } else if (
+        bookCard.title.toLowerCase().includes(searchText.toLowerCase())
+      ) {
+        return bookCard;
+      }
+    })
+    .map((bookCard) => {
+      return <BookCard key={bookCard.id} bookCard={bookCard} />;
+    });
 
   return (
     <div id="library">
@@ -34,11 +28,10 @@ export default function LibraryPage() {
         <div className="search-container">
           <input
             type="text"
-            value={serchText}
+            placeholder="Search Titles..."
+            value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <button onClick={handleSearch}>Search</button>
-          
         </div>
         <div className="book-container">{displayBooks}</div>
       </div>

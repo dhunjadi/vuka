@@ -1,41 +1,33 @@
-
-import home from '../../images/home.png'
-import library from '../../images/library.png'
-import schedule from '../../images/schedule.png'
-import grades from '../../images/grades.png'
-import settings from '../../images/settings.png'
-import tasks from '../../images/tasks.png'
-
 const navbarList =[
     {
         title: "Home",
         url: "/home",
-        icon: `${home}`
+        icon: "/images/Navbar/home.png"
     },
     {
         title: "Tasks",
         url: "/tasks",
-        icon: `${tasks}`
+        icon: "/images/Navbar/tasks.png"
     },
     {
         title: "Schedule",
         url: "/schedule",
-        icon: `${schedule}`
+        icon: "/images/Navbar/schedule.png"
     },
     {
         title: "Library",
         url: "/library",
-        icon: `${library}`
+        icon: "/images/Navbar/library.png"
     },
     {
         title: "Grades",
         url: "/grades",
-        icon: `${grades}`
+        icon: "/images/Navbar/grades.png"
     },
     {
         title: "Settings",
         url: "/settings",
-        icon: `${settings}`
+        icon: "/images/Navbar/settings.png"
     }
 ]
 

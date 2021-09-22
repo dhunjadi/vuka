@@ -1,11 +1,13 @@
 import React from 'react'
 
 export default function BookCard({bookCard}) {
+    const {imageLink, title, country} = bookCard
+    
     return (
         <div className='book-card'>
-            <img src={bookCard.volumeInfo.imageLinks.thumbnail} alt={bookCard.volumeInfo.title} />
-            <h3>{bookCard.volumeInfo.title}</h3>
-            <p>{bookCard.volumeInfo.description}</p>
+            <img src={imageLink} alt={title+'.jpg'} />
+            <h3>{title}</h3>
+            <h3>{country}</h3>
         </div>
     )
 }

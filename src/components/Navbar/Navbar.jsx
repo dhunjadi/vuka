@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import logo from "../../images/logo.png";
 import { UserContext } from "../../context/UserContex";
 import navbarList from "./navbarList";
 import { v4 as uuidv4 } from "uuid";
@@ -26,7 +25,7 @@ export default function Navbar() {
   return (
     <nav>
       <div className="logo-container-nav">
-        <img src={logo} alt="logo" />
+        <img src='/images/Navbar/logo.png' alt="logo" />
         <h3>{loggedInUser.fName}</h3>
       </div>
       <div className="menu-icon" onClick={handleClick}>
