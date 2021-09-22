@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import axios from "axios";
+import BookCard from "../components/Library/BookCard";
 
 export default function LibraryPage() {
   const apiKey = "AIzaSyAXI3E9DPOQNaxMGoStQp2JVaYY5NFQhnI";
@@ -18,12 +19,12 @@ export default function LibraryPage() {
       )
       .then((res) => {
         setResults(res.data.items);
-        console.log(results);
+        console.log(results)
       });
   };
 
-  const displayBooks = results.map((book) => {
-    return <img src={book.volumeInfo.imageLinks.thumbnail} alt="" />;
+  const displayBooks = results.map((bookCard) => {
+    return <BookCard key={bookCard.id} bookCard={bookCard}/>
   });
 
   return (
