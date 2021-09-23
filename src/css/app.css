@@ -20,7 +20,7 @@ body{
     background-color: #4e0930;
 }
 
-   #home, #grades, #library, #schedule, #settings, #tasks{
+   #home, #grades, #library, #schedule, #settings, #tasks, #book-details{
     height: 100vh;
     background-color: #4e0930;
     overflow-x: hidden;

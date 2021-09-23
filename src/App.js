@@ -8,6 +8,7 @@ import SchedulePage from './pages/SchedulePage';
 import LibraryPage from './pages/LibraryPage';
 import GradesPage from './pages/GradesPage';
 import SettingsPage from './pages/SettingsPage';
+import BookDetails from './components/Library/BookDetails';
 
 
 
@@ -21,6 +22,7 @@ export default function App() {
               <Route path="/tasks" exact component={TasksPage} />
               <Route path="/schedule" exact component={SchedulePage} />
               <Route path="/library" exact component={LibraryPage} />
+              <Route path="/library/book/:id" component={BookDetails} />
               <Route path="/grades" exact component={GradesPage} />
               <Route path="/settings" exact component={SettingsPage} />
             </Switch>
