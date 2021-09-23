@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Navbar from "../components/Navbar/Navbar";
-import taskList from "../taskList";
+import taskList from "../components/Tasks/taskList"
 import TaskCard from "../components/Tasks/TaskCard";
 import { UserContext } from "../context/UserContex";
 import { v4 as uuidv4 } from "uuid";

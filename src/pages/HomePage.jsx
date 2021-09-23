@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import Navbar from "../components/Navbar/Navbar";
-import newsList from "../newsList";
+import newsList from "../components/News/newsList"
 import { v4 as uuidv4 } from "uuid";
 import NewsCard from "../components/News/NewsCard";
 import ReactPaginate from "react-paginate";
