@@ -8,7 +8,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
       pages: 209,
       title: "Things Fall Apart",
-      year: 1958
+      year: 1958,
+      copiesAvailiable: 5
     },
     {
       id: "2",
@@ -19,7 +20,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.\n",
       pages: 784,
       title: "Fairy tales",
-      year: 1836
+      year: 1836,
+      copiesAvailiable: 5
     },
     {
       id: "3",
@@ -30,7 +32,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Divine_Comedy\n",
       pages: 928,
       title: "The Divine Comedy",
-      year: 1315
+      year: 1315,
+      copiesAvailiable: 5
     },
     {
       id: "4",
@@ -41,7 +44,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh\n",
       pages: 160,
       title: "The Epic Of Gilgamesh",
-      year: -1700
+      year: -170,
+      copiesAvailiable: 50
     },
     {
       id: "5",
@@ -52,7 +56,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Book_of_Job\n",
       pages: 176,
       title: "The Book Of Job",
-      year: -600
+      year: -600,
+      copiesAvailiable: 5
     },
     {
       id: "6",
@@ -63,7 +68,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights\n",
       pages: 288,
       title: "One Thousand and One Nights",
-      year: 1200
+      year: 1200,
+      copiesAvailiable: 5
     },
     {
       id: "7",
@@ -74,7 +80,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Pride_and_Prejudice\n",
       pages: 226,
       title: "Pride and Prejudice",
-      year: 1813
+      year: 1813,
+      copiesAvailiable: 5
     },
     {
       id: "8",
@@ -85,7 +92,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Molloy_(novel)\n",
       pages: 256,
       title: "Molloy, Malone Dies, The Unnamable, the trilogy",
-      year: 1952
+      year: 1952,
+      copiesAvailiable: 5
     },
     {
       id: "9",
@@ -96,7 +104,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Decameron\n",
       pages: 1024,
       title: "The Decameron",
-      year: 1351
+      year: 1351,
+      copiesAvailiable: 5
     },
     {
       id: "10",
@@ -107,7 +116,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Ficciones\n",
       pages: 224,
       title: "Ficciones",
-      year: 1965
+      year: 1965,
+      copiesAvailiable: 5
     },
     {
       id: "11",
@@ -118,7 +128,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Wuthering_Heights\n",
       pages: 342,
       title: "Wuthering Heights",
-      year: 1847
+      year: 1847,
+      copiesAvailiable: 5
     },
     {
       id: "12",
@@ -129,7 +140,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Stranger_(novel)\n",
       pages: 185,
       title: "The Stranger",
-      year: 1942
+      year: 1942,
+      copiesAvailiable: 5
     },
     {
       id: "13",
@@ -140,7 +152,8 @@ const bookList = [
       link: "\n",
       pages: 320,
       title: "Poems",
-      year: 1952
+      year: 1952,
+      copiesAvailiable: 5
     },
     {
       id: "14",
@@ -151,7 +164,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Journey_to_the_End_of_the_Night\n",
       pages: 505,
       title: "Journey to the End of the Night",
-      year: 1932
+      year: 1932,
+      copiesAvailiable: 5
     },
     {
       id: "15",
@@ -162,7 +176,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Don_Quixote\n",
       pages: 1056,
       title: "Don Quijote De La Mancha",
-      year: 1610
+      year: 1610,
+      copiesAvailiable: 5
     },
     {
       id: "16",
@@ -173,7 +188,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Canterbury_Tales\n",
       pages: 544,
       title: "The Canterbury Tales",
-      year: 1450
+      year: 1450,
+      copiesAvailiable: 5
     },
     {
       id: "17",
@@ -184,7 +200,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/List_of_short_stories_by_Anton_Chekhov\n",
       pages: 194,
       title: "Stories",
-      year: 1886
+      year: 1886,
+      copiesAvailiable: 5
     },
     {
       id: "18",
@@ -195,7 +212,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Nostromo\n",
       pages: 320,
       title: "Nostromo",
-      year: 1904
+      year: 1904,
+      copiesAvailiable: 5
     },
     {
       id: "19",
@@ -206,7 +224,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Great_Expectations\n",
       pages: 194,
       title: "Great Expectations",
-      year: 1861
+      year: 1861,
+      copiesAvailiable: 5
     },
     {
       id: "20",
@@ -217,7 +236,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Jacques_the_Fatalist\n",
       pages: 596,
       title: "Jacques the Fatalist",
-      year: 1796
+      year: 1796,
+      copiesAvailiable: 5
     },
     {
       id: "21",
@@ -228,7 +248,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Berlin_Alexanderplatz\n",
       pages: 600,
       title: "Berlin Alexanderplatz",
-      year: 1929
+      year: 1929,
+      copiesAvailiable: 5
     },
     {
       id: "22",
@@ -239,7 +260,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Crime_and_Punishment\n",
       pages: 551,
       title: "Crime and Punishment",
-      year: 1866
+      year: 1866,
+      copiesAvailiable: 5
     },
     {
       id: "23",
@@ -250,7 +272,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Idiot\n",
       pages: 656,
       title: "The Idiot",
-      year: 1869
+      year: 1869,
+      copiesAvailiable: 5
     },
     {
       id: "24",
@@ -261,7 +284,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Demons_(Dostoyevsky_novel)\n",
       pages: 768,
       title: "The Possessed",
-      year: 1872
+      year: 1872,
+      copiesAvailiable: 5
     },
     {
       id: "25",
@@ -272,7 +296,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Brothers_Karamazov\n",
       pages: 824,
       title: "The Brothers Karamazov",
-      year: 1880
+      year: 1880,
+      copiesAvailiable: 5
     },
     {
       id: "26",
@@ -283,7 +308,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Middlemarch\n",
       pages: 800,
       title: "Middlemarch",
-      year: 1871
+      year: 1871,
+      copiesAvailiable: 5
     },
     {
       id: "27",
@@ -294,7 +320,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Invisible_Man\n",
       pages: 581,
       title: "Invisible Man",
-      year: 1952
+      year: 1952,
+      copiesAvailiable: 5
     },
     {
       id: "28",
@@ -305,7 +332,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Medea_(play)\n",
       pages: 104,
       title: "Medea",
-      year: -431
+      year: -431,
+      copiesAvailiable: 5
     },
     {
       id: "29",
@@ -316,7 +344,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Absalom,_Absalom!\n",
       pages: 313,
       title: "Absalom, Absalom!",
-      year: 1936
+      year: 1936,
+      copiesAvailiable: 5
     },
     {
       id: "30",
@@ -327,7 +356,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Sound_and_the_Fury\n",
       pages: 326,
       title: "The Sound and the Fury",
-      year: 1929
+      year: 1929,
+      copiesAvailiable: 5
     },
     {
       id: "31",
@@ -338,7 +368,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Madame_Bovary\n",
       pages: 528,
       title: "Madame Bovary",
-      year: 1857
+      year: 1857,
+      copiesAvailiable: 5
     },
     {
       id: "32",
@@ -349,7 +380,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Sentimental_Education\n",
       pages: 606,
       title: "Sentimental Education",
-      year: 1869
+      year: 1869,
+      copiesAvailiable: 5
     },
     {
       id: "33",
@@ -360,7 +392,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Gypsy_Ballads\n",
       pages: 218,
       title: "Gypsy Ballads",
-      year: 1928
+      year: 1928,
+      copiesAvailiable: 5
     },
     {
       id: "34",
@@ -371,7 +404,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude\n",
       pages: 417,
       title: "One Hundred Years of Solitude",
-      year: 1967
+      year: 1967,
+      copiesAvailiable: 5
     },
     {
       id: "35",
@@ -382,7 +416,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Love_in_the_Time_of_Cholera\n",
       pages: 368,
       title: "Love in the Time of Cholera",
-      year: 1985
+      year: 1985,
+      copiesAvailiable: 5
     },
     {
       id: "36",
@@ -393,7 +428,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Goethe%27s_Faust\n",
       pages: 158,
       title: "Faust",
-      year: 1832
+      year: 1832,
+      copiesAvailiable: 5
     },
     {
       id: "37",
@@ -404,7 +440,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Dead_Souls\n",
       pages: 432,
       title: "Dead Souls",
-      year: 1842
+      year: 1842,
+      copiesAvailiable: 5
     },
     {
       id: "38",
@@ -415,7 +452,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Tin_Drum\n",
       pages: 600,
       title: "The Tin Drum",
-      year: 1959
+      year: 1959,
+      copiesAvailiable: 5
     },
     {
       id: "39",
@@ -426,7 +464,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Devil_to_Pay_in_the_Backlands\n",
       pages: 494,
       title: "The Devil to Pay in the Backlands",
-      year: 1956
+      year: 1956,
+      copiesAvailiable: 5
     },
     {
       id: "40",
@@ -437,7 +476,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Hunger_(Hamsun_novel)\n",
       pages: 176,
       title: "Hunger",
-      year: 1890
+      year: 1890,
+      copiesAvailiable: 5
     },
     {
       id: "41",
@@ -448,7 +488,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea\n",
       pages: 128,
       title: "The Old Man and the Sea",
-      year: 1952
+      year: 1952,
+      copiesAvailiable: 5
     },
     {
       id: "42",
@@ -459,7 +500,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Iliad\n",
       pages: 608,
       title: "Iliad",
-      year: -735
+      year: -735,
+      copiesAvailiable: 5
     },
     {
       id: "43",
@@ -470,7 +512,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Odyssey\n",
       pages: 374,
       title: "Odyssey",
-      year: -800
+      year: -800,
+      copiesAvailiable: 5
     },
     {
       id: "44",
@@ -481,7 +524,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/A_Doll%27s_House\n",
       pages: 68,
       title: "A Doll's House",
-      year: 1879
+      year: 1879,
+      copiesAvailiable: 5
     },
     {
       id: "45",
@@ -492,7 +536,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Ulysses_(novel)\n",
       pages: 228,
       title: "Ulysses",
-      year: 1922
+      year: 1922,
+      copiesAvailiable: 5
     },
     {
       id: "46",
@@ -503,7 +548,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Franz_Kafka_bibliography#Short_stories\n",
       pages: 488,
       title: "Stories",
-      year: 1924
+      year: 1924,
+      copiesAvailiable: 5
     },
     {
       id: "47",
@@ -514,7 +560,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Trial\n",
       pages: 160,
       title: "The Trial",
-      year: 1925
+      year: 1925,
+      copiesAvailiable: 5
     },
     {
       id: "48",
@@ -525,7 +572,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Castle_(novel)\n",
       pages: 352,
       title: "The Castle",
-      year: 1926
+      year: 1926,
+      copiesAvailiable: 5
     },
     {
       id: "49",
@@ -537,7 +585,8 @@ const bookList = [
       pages: 147,
       title: "The recognition of Shakuntala",
       year: 150
-    },
+,
+copiesAvailiable: 5    },
     {
       id: "50",
       author: "Yasunari Kawabata",
@@ -547,7 +596,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Sound_of_the_Mountain\n",
       pages: 288,
       title: "The Sound of the Mountain",
-      year: 1954
+      year: 1954,
+      copiesAvailiable: 5
     },
     {
       id: "51",
@@ -558,7 +608,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Zorba_the_Greek\n",
       pages: 368,
       title: "Zorba the Greek",
-      year: 1946
+      year: 1946,
+      copiesAvailiable: 5
     },
     {
       id: "52",
@@ -569,7 +620,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Sons_and_Lovers\n",
       pages: 432,
       title: "Sons and Lovers",
-      year: 1913
+      year: 1913,
+      copiesAvailiable: 5
     },
     {
       id: "53",
@@ -580,7 +632,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Independent_People\n",
       pages: 470,
       title: "Independent People",
-      year: 1934
+      year: 1934,
+      copiesAvailiable: 5
     },
     {
       id: "54",
@@ -591,7 +644,8 @@ const bookList = [
       link: "\n",
       pages: 184,
       title: "Poems",
-      year: 1818
+      year: 1818,
+      copiesAvailiable: 5
     },
     {
       id: "55",
@@ -602,7 +656,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Golden_Notebook\n",
       pages: 688,
       title: "The Golden Notebook",
-      year: 1962
+      year: 1962,
+      copiesAvailiable: 5
     },
     {
       id: "56",
@@ -613,7 +668,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Pippi_Longstocking\n",
       pages: 160,
       title: "Pippi Longstocking",
-      year: 1945
+      year: 1945,
+      copiesAvailiable: 5
     },
     {
       id: "57",
@@ -624,7 +680,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/A_Madman%27s_Diary\n",
       pages: 389,
       title: "Diary of a Madman",
-      year: 1918
+      year: 1918,
+      copiesAvailiable: 5
     },
     {
       id: "58",
@@ -635,7 +692,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Children_of_Gebelawi\n",
       pages: 355,
       title: "Children of Gebelawi",
-      year: 1959
+      year: 1959,
+      copiesAvailiable: 5
     },
     {
       id: "59",
@@ -646,7 +704,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Buddenbrooks\n",
       pages: 736,
       title: "Buddenbrooks",
-      year: 1901
+      year: 1901,
+      copiesAvailiable: 5
     },
     {
       id: "60",
@@ -657,7 +716,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Magic_Mountain\n",
       pages: 720,
       title: "The Magic Mountain",
-      year: 1924
+      year: 1924,
+      copiesAvailiable: 5
     },
     {
       id: "61",
@@ -668,7 +728,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Moby-Dick\n",
       pages: 378,
       title: "Moby Dick",
-      year: 1851
+      year: 1851,
+      copiesAvailiable: 5
     },
     {
       id: "62",
@@ -679,7 +740,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Essays_(Montaigne)\n",
       pages: 404,
       title: "Essays",
-      year: 1595
+      year: 1595,
+      copiesAvailiable: 5
     },
     {
       id: "63",
@@ -690,7 +752,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/History_(novel)\n",
       pages: 600,
       title: "History",
-      year: 1974
+      year: 1974,
+      copiesAvailiable: 5
     },
     {
       id: "64",
@@ -701,7 +764,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Beloved_(novel)\n",
       pages: 321,
       title: "Beloved",
-      year: 1987
+      year: 1987,
+      copiesAvailiable: 5
     },
     {
       id: "65",
@@ -712,7 +776,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Tale_of_Genji\n",
       pages: 1360,
       title: "The Tale of Genji",
-      year: 1006
+      year: 1006,
+      copiesAvailiable: 5
     },
     {
       id: "66",
@@ -723,7 +788,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Man_Without_Qualities\n",
       pages: 365,
       title: "The Man Without Qualities",
-      year: 1931
+      year: 1931,
+      copiesAvailiable: 5
     },
     {
       id: "67",
@@ -734,7 +800,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Lolita\n",
       pages: 317,
       title: "Lolita",
-      year: 1955
+      year: 1955,
+      copiesAvailiable: 5
     },
     {
       id: "68",
@@ -745,7 +812,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four\n",
       pages: 272,
       title: "Nineteen Eighty-Four",
-      year: 1949
+      year: 1949,
+      copiesAvailiable: 5
     },
     {
       id: "69",
@@ -757,7 +825,8 @@ const bookList = [
       pages: 576,
       title: "Metamorphoses",
       year: 100
-    },
+,
+copiesAvailiable: 5    },
     {
       id: "70",
       author: "Fernando Pessoa",
@@ -767,7 +836,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Book_of_Disquiet\n",
       pages: 272,
       title: "The Book of Disquiet",
-      year: 1928
+      year: 1928,
+      copiesAvailiable: 5
     },
     {
       id: "71",
@@ -778,7 +848,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Edgar_Allan_Poe_bibliography#Tales\n",
       pages: 842,
       title: "Tales",
-      year: 1950
+      year: 1950,
+      copiesAvailiable: 5
     },
     {
       id: "72",
@@ -789,7 +860,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/In_Search_of_Lost_Time\n",
       pages: 2408,
       title: "In Search of Lost Time",
-      year: 1920
+      year: 1920,
+      copiesAvailiable: 5
     },
     {
       id: "73",
@@ -800,7 +872,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Gargantua_and_Pantagruel\n",
       pages: 623,
       title: "Gargantua and Pantagruel",
-      year: 1533
+      year: 1533,
+      copiesAvailiable: 5
     },
     {
       id: "74",
@@ -811,7 +884,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Pedro_P%C3%A1ramo\n",
       pages: 124,
       title: "Pedro P\u00e1ramo",
-      year: 1955
+      year: 1955,
+      copiesAvailiable: 5
     },
     {
       id: "75",
@@ -822,7 +896,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Masnavi\n",
       pages: 438,
       title: "The Masnavi",
-      year: 1236
+      year: 1236,
+      copiesAvailiable: 5
     },
     {
       id: "76",
@@ -833,7 +908,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Midnight%27s_Children\n",
       pages: 536,
       title: "Midnight's Children",
-      year: 1981
+      year: 1981,
+      copiesAvailiable: 5
     },
     {
       id: "77",
@@ -844,7 +920,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Bustan_(book)\n",
       pages: 298,
       title: "Bostan",
-      year: 1257
+      year: 1257,
+      copiesAvailiable: 5
     },
     {
       id: "78",
@@ -855,7 +932,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Season_of_Migration_to_the_North\n",
       pages: 139,
       title: "Season of Migration to the North",
-      year: 1966
+      year: 1966,
+      copiesAvailiable: 5
     },
     {
       id: "79",
@@ -866,7 +944,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Blindness_(novel)\n",
       pages: 352,
       title: "Blindness",
-      year: 1995
+      year: 1995,
+      copiesAvailiable: 5
     },
     {
       id: "80",
@@ -877,7 +956,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Hamlet\n",
       pages: 432,
       title: "Hamlet",
-      year: 1603
+      year: 1603,
+      copiesAvailiable: 5
     },
     {
       id: "81",
@@ -888,7 +968,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/King_Lear\n",
       pages: 384,
       title: "King Lear",
-      year: 1608
+      year: 1608,
+      copiesAvailiable: 5
     },
     {
       id: "82",
@@ -899,7 +980,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Othello\n",
       pages: 314,
       title: "Othello",
-      year: 1609
+      year: 1609,
+      copiesAvailiable: 5
     },
     {
       id: "83",
@@ -910,7 +992,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Oedipus_the_King\n",
       pages: 88,
       title: "Oedipus the King",
-      year: -430
+      year: -430,
+      copiesAvailiable: 5
     },
     {
       id: "84",
@@ -921,7 +1004,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Red_and_the_Black\n",
       pages: 576,
       title: "The Red and the Black",
-      year: 1830
+      year: 1830,
+      copiesAvailiable: 5
     },
     {
       id: "85",
@@ -932,7 +1016,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Life_and_Opinions_of_Tristram_Shandy,_Gentleman\n",
       pages: 640,
       title: "The Life And Opinions of Tristram Shandy",
-      year: 1760
+      year: 1760,
+      copiesAvailiable: 5
     },
     {
       id: "86",
@@ -943,7 +1028,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Zeno%27s_Conscience\n",
       pages: 412,
       title: "Confessions of Zeno",
-      year: 1923
+      year: 1923,
+      copiesAvailiable: 5
     },
     {
       id: "87",
@@ -954,7 +1040,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Gulliver%27s_Travels\n",
       pages: 178,
       title: "Gulliver's Travels",
-      year: 1726
+      year: 1726,
+      copiesAvailiable: 5
     },
     {
       id: "88",
@@ -965,7 +1052,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/War_and_Peace\n",
       pages: 1296,
       title: "War and Peace",
-      year: 1867
+      year: 1867,
+      copiesAvailiable: 5
     },
     {
       id: "89",
@@ -976,7 +1064,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Anna_Karenina\n",
       pages: 864,
       title: "Anna Karenina",
-      year: 1877
+      year: 1877,
+      copiesAvailiable: 5
     },
     {
       id: "90",
@@ -987,7 +1076,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/The_Death_of_Ivan_Ilyich\n",
       pages: 92,
       title: "The Death of Ivan Ilyich",
-      year: 1886
+      year: 1886,
+      copiesAvailiable: 5
     },
     {
       id: "91",
@@ -998,7 +1088,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Adventures_of_Huckleberry_Finn\n",
       pages: 224,
       title: "The Adventures of Huckleberry Finn",
-      year: 1884
+      year: 1884,
+      copiesAvailiable: 5
     },
     {
       id: "92",
@@ -1009,7 +1100,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Ramayana\n",
       pages: 152,
       title: "Ramayana",
-      year: -450
+      year: -450,
+      copiesAvailiable: 5
     },
     {
       id: "93",
@@ -1021,7 +1113,8 @@ const bookList = [
       pages: 442,
       title: "The Aeneid",
       year: -23
-    },
+,
+copiesAvailiable: 5    },
     {
       id: "94",
       author: "Vyasa",
@@ -1031,7 +1124,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Mahabharata\n",
       pages: 276,
       title: "Mahabharata",
-      year: -700
+      year: -700,
+      copiesAvailiable: 5
     },
     {
       id: "95",
@@ -1042,7 +1136,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Leaves_of_Grass\n",
       pages: 152,
       title: "Leaves of Grass",
-      year: 1855
+      year: 1855,
+      copiesAvailiable: 5
     },
     {
       id: "96",
@@ -1053,7 +1148,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Mrs_Dalloway\n",
       pages: 216,
       title: "Mrs Dalloway",
-      year: 1925
+      year: 1925,
+      copiesAvailiable: 5
     },
     {
       id: "97",
@@ -1064,7 +1160,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/To_the_Lighthouse\n",
       pages: 209,
       title: "To the Lighthouse",
-      year: 1927
+      year: 1927,
+      copiesAvailiable: 5
     },
     {
       id: "98",
@@ -1075,7 +1172,8 @@ const bookList = [
       link: "https://en.wikipedia.org/wiki/Memoirs_of_Hadrian\n",
       pages: 408,
       title: "Memoirs of Hadrian",
-      year: 1951
+      year: 1951,
+      copiesAvailiable: 5
     }
   ]
 

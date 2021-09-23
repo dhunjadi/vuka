@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import bookList from "./bookList";
+import { UserContext } from "../../context/UserContex";
 
 export default function BookDetails(props) {
   const book = bookList.find((element) => element.id === props.match.params.id);
-  const { imageLink, title, author, language, pages, year } = book;
+  const { imageLink, title, author, language, pages, year } =
+    book;
+  const { loggedInUser } = useContext(UserContext);
+  const [copies, setCopies] = useState(book.copiesAvailiable);
+
+  const handleReservation = () => {
+    const duplicate = loggedInUser.books.find((x) => x.id === book.id);
+    if (!duplicate && copies > 0) {
+      setCopies((prevCopies) => prevCopies - 1);
+      loggedInUser.books.push(book);
+      console.log(loggedInUser.books)
+    }
+  };
 
   return (
     <div id="book-details">
@@ -34,14 +47,15 @@ export default function BookDetails(props) {
             <h4>Year:</h4>
             <p>{year}</p>
           </div>
+          <div className="book-details-pair">
+            <h4>Copies Availiable:</h4>
+            <p>{copies}</p>
+          </div>
           <div className="book-details-btn">
-      <button>Make a reservation</button>
-      </div>
+            <button onClick={handleReservation}>Make a reservation</button>
+          </div>
         </div>
-        
       </div>
-      
-      
     </div>
   );
 }

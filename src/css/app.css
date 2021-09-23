@@ -1,55 +1,61 @@
-@import 'min280.css';
-@import 'min768.css';
-@import 'min1024.css';
+@import "min280.css";
+@import "min768.css";
+@import "min1024.css";
 
-body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
-   /* PAGES */
+/* PAGES */
 
-   #login-page{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #4e0930;
+#login-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #4e0930;
 }
 
-   #home, #grades, #library, #schedule, #settings, #tasks, #book-details{
-    height: 100vh;
-    background-color: #4e0930;
-    overflow-x: hidden;
+#home,
+#grades,
+#library,
+#schedule,
+#settings,
+#tasks,
+#book-details {
+  height: 100vh;
+  background-color: #4e0930;
+  overflow-x: hidden;
 }
 
-h1, h3, h4{
-    color: #eba904;
+h1,
+h3,
+h4 {
+  color: #eba904;
 }
 
-.active-news{
-    border: 2px solid #eba904;
-    border-radius: 10px;
+.active-news {
+  border: 2px solid #eba904;
+  border-radius: 10px;
 }
 
-.task-card-completed{
-    background-color: #a1a1a1
-  }
+.task-card-completed {
+  background-color: #a1a1a1;
+}
 
-  .task-card-completed h1{
-    color: black
-  }
+.task-card-completed h1 {
+  color: black;
+}
 
-  .task-card-completed button{
-    background-color: #8f8f8f;
-    color: black
-  }
+.task-card-completed button {
+  background-color: #8f8f8f;
+  color: black;
+}
 
-  a {
-    text-decoration: none;
-  }
-
-
+a {
+  text-decoration: none;
+}
