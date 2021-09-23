@@ -324,4 +324,45 @@
 
   /* BOOK DETAILS */
 
+  .book-details-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #870f54;
+    padding: 10px;
+  }
+
+  .book-details-img{
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+  }
+
+  .book-details-txt{
+    padding: 10px;
+  }
+
+  .book-details-pair{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .book-details-pair p{
+    padding: 10px;
+    color: white;
+  }
+
+  .book-details-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .book-details-btn button{
+    width: 50%;
+  }
+  
 }

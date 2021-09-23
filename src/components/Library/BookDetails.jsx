@@ -9,31 +9,39 @@ export default function BookDetails(props) {
   return (
     <div id="book-details">
       <Navbar />
-      <div className="book-details-img">
-        <img src={imageLink} alt={title} />
+      <div className="book-details-container">
+        <div className="book-details-img">
+          <img src={imageLink} alt={title} />
+        </div>
+        <div className="book-details-txt">
+          <div className="book-details-pair">
+            <h4>Title:</h4>
+            <p>{title}</p>
+          </div>
+          <div className="book-details-pair">
+            <h4>Author:</h4>
+            <p>{author}</p>
+          </div>
+          <div className="book-details-pair">
+            <h4>Language:</h4>
+            <p>{language}</p>
+          </div>
+          <div className="book-details-pair">
+            <h4>Pages:</h4>
+            <p>{pages}</p>
+          </div>
+          <div className="book-details-pair">
+            <h4>Year:</h4>
+            <p>{year}</p>
+          </div>
+          <div className="book-details-btn">
+      <button>Make a reservation</button>
       </div>
-      <div className="book-details-txt">
-        <div className="pair">
-          <h4>Title:</h4>
-          <p>{title}</p>
         </div>
-        <div className="pair">
-          <h4>Author:</h4>
-          <p>{author}</p>
-        </div>
-        <div className="pair">
-          <h4>Language:</h4>
-          <p>{language}</p>
-        </div>
-        <div className="pair">
-          <h4>Pages:</h4>
-          <p>{pages}</p>
-        </div>
-        <div className="pair">
-          <h4>Year:</h4>
-          <p>{year}</p>
-        </div>
+        
       </div>
+      
+      
     </div>
   );
 }

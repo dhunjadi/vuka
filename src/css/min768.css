@@ -322,5 +322,48 @@
     border-radius: 10px;
   }
 
+   /* BOOK DETAILS */
+
+   .book-details-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .book-details-img{
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+  }
+
+  .book-details-txt{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .book-details-pair{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+  }
+
+  .book-details-pair p{
+    padding: 10px;
+    color: white;
+  }
+
+  .book-details-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  .book-details-btn button{
+    width: 40%;
+  }
+
 
 }
