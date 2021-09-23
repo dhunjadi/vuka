@@ -5,17 +5,19 @@ import { UserContext } from "../../context/UserContex";
 
 export default function BookDetails(props) {
   const book = bookList.find((element) => element.id === props.match.params.id);
-  const { imageLink, title, author, language, pages, year } =
-    book;
+  const { imageLink, title, author, language, pages, year } = book;
   const { loggedInUser } = useContext(UserContext);
   const [copies, setCopies] = useState(book.copiesAvailiable);
+  const [showModal, setShowModal] = useState(false)
 
   const handleReservation = () => {
     const duplicate = loggedInUser.books.find((x) => x.id === book.id);
     if (!duplicate && copies > 0) {
       setCopies((prevCopies) => prevCopies - 1);
       loggedInUser.books.push(book);
-      console.log(loggedInUser.books)
+      console.log(loggedInUser.books);
+    } else {
+      setShowModal(!showModal)
     }
   };
 
@@ -55,6 +57,12 @@ export default function BookDetails(props) {
             <button onClick={handleReservation}>Make a reservation</button>
           </div>
         </div>
+        {showModal ? (
+          <div className="modal">
+            <h1>You can reserve one copy of a book at a time!</h1>
+            <button onClick={() => setShowModal(!showModal)}>OK</button>
+          </div>
+        ) : null}
       </div>
     </div>
   );
