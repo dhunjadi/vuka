@@ -308,7 +308,7 @@
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
-    width: 40vw;
+    width: 35vw;
     height: auto;
     transition: all 0.5s ease-in-out;
   }
@@ -389,7 +389,7 @@
   /* CLASS CARD */
 
   .class-card{
-    width: 40vw;
+    width: 35vw;
     background-color: #870f54;
     border-radius: 10px;
     padding: 10px;

@@ -9,13 +9,9 @@ export default function LibraryPage() {
 
   const displayBooks = results
     .filter((bookCard) => {
-      if (searchText === "") {
+      if (bookCard.title.toLowerCase().includes(searchText.toLowerCase())) {
         return bookCard;
-      } else if (
-        bookCard.title.toLowerCase().includes(searchText.toLowerCase())
-      ) {
-        return bookCard;
-      }
+      } else return false;
     })
     .map((bookCard) => {
       return <BookCard key={bookCard.id} bookCard={bookCard} />;
