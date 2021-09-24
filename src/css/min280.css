@@ -377,20 +377,45 @@
 
   /* GRADES PAGE */
 
-  .student-name-container{
-    width: 100%;
+  .grades-container{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
   }
 
   /* CLASS CARD */
 
   .class-card{
+    width: 100%;
     background-color: #870f54;
     border-radius: 10px;
     padding: 10px;
     margin: 10px 0;
+  }
+
+  .class-card-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .class-card-info{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #eba904;
+    font-weight: 700;
+  }
+
+  .class-card-grades{
+    background-color: #4e0930;
+    border-radius: 10px;
+    padding: 10px;
+    color: #eba904;
+    font-weight: 600;
   }
   
 }

@@ -10,8 +10,8 @@ export default function ClassCard({ classCard }) {
         <h3>{title}</h3>
       </div>
       <div className="class-card-info">
-        <p>ECTS: {ects}</p>
         <p>Semester: {semester}</p>
+        <p>ECTS: {ects}</p>
       </div>
       <div className="class-card-grades">
         <p>Exam 1: {exam1}</p>
