@@ -54,12 +54,12 @@ export default function BookDetails(props) {
             <p>{copies}</p>
           </div>
           <div className="book-details-btn">
-            <button onClick={handleReservation}>Make a reservation</button>
+            <button className={copies === 0 ? 'disabled-btn' : null} disabled={copies === 0 ? true : false} onClick={handleReservation}>{copies === 0 ? 'There are no copies left' : 'Make a reservation'}</button>
           </div>
         </div>
         {showModal ? (
           <div className="modal">
-            <h1>You can reserve one copy of a book at a time!</h1>
+            <p>You can reserve one copy of a book at a time!</p>
             <button onClick={() => setShowModal(!showModal)}>OK</button>
           </div>
         ) : null}

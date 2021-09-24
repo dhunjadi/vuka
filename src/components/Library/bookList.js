@@ -9,7 +9,7 @@ const bookList = [
       pages: 209,
       title: "Things Fall Apart",
       year: 1958,
-      copiesAvailiable: 5
+      copiesAvailiable: 1
     },
     {
       id: "2",
