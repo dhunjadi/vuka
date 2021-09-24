@@ -5,6 +5,7 @@ export const UserContext = createContext();
 export const UserContextProvider = ({ children }) => {
   const [userList] = useState([
     {
+      id: 1,
       email: "iivanic@vuka.hr",
       password: "vukastudent",
       fName: "Ivan",
@@ -12,9 +13,157 @@ export const UserContextProvider = ({ children }) => {
       status: "student",
       study: "hospitality",
       year: 2,
-      books : []
+      books : [],
+      classes: [
+        {
+          title: 'Basic Economics I',
+          semester: 1,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 5
+        },
+        {
+          title: 'Business Mathematics I',
+          semester: 1,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 4
+        },
+        {
+          title: 'Computer Science in Business I',
+          semester: 1,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 3
+        },
+        {
+          title: 'Fundamentals of Tourism',
+          semester: 1,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 4
+        },
+        {
+          title: 'Introduction to Professional and Scientific Work',
+          semester: 1,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 3
+        },
+        {
+          title: 'Physical Education (PE) (1/4)',
+          semester: 1,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 0
+        },
+        {
+          title: 'Tourism Geography I',
+          semester: 1,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 5
+        },
+        {
+          title: 'Basic Economics II',
+          semester: 2,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 5
+        },
+        {
+          title: 'Business Law',
+          semester: 2,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 3
+        },
+        {
+          title: 'Business Mathematics II',
+          semester: 2,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 4
+        },
+        {
+          title: 'Tourism Geography I',
+          semester: 1,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 5
+        },
+        {
+          title: 'Computer Science in Business II',
+          semester: 2,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 3
+        },
+        {
+          title: 'Physical Education (PE) (2/4)',
+          semester: 2,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 0
+        },
+        {
+          title: 'Tourism Economics',
+          semester: 2,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 4
+        },
+        {
+          title: 'Tourism Geography II',
+          semester: 2,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 4
+        },
+        {
+          title: 'Tourism Geography II',
+          semester: 2,
+          exam1: null,
+          exam2: null,
+          essay: null,
+          presentation: null,
+          ects: 4
+        }
+        
+      ]
     },
     {
+      id: 2,
       email: "mmarkovic@vuka.hr",
       password: "vukaprof",
       fName: "Marko",
@@ -25,6 +174,7 @@ export const UserContextProvider = ({ children }) => {
       books : []
     },
     {
+      id: 3,
       email: "admin@vuka.hr",
       password: "vukaadmin",
       fName: "Admin",
