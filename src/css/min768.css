@@ -419,5 +419,24 @@
     font-weight: 600;
   }
 
+  .semester-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .semester {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+    color: #eba904;
+    margin: 10px;
+  }
 
 }

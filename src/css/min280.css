@@ -291,7 +291,7 @@
     width: 50%;
   }
 
-  .book-container{
+  .book-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -313,14 +313,14 @@
     transition: all 0.5s ease-in-out;
   }
 
-  .book-title-container{
+  .book-title-container {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
-  .book-author-container{
+  .book-author-container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -334,36 +334,36 @@
 
   /* BOOK DETAILS */
 
-  .book-details-container{
+  .book-details-container {
     display: grid;
     grid-template-columns: 1fr;
     background-color: #870f54;
     padding: 10px;
   }
 
-  .book-details-img{
+  .book-details-img {
     display: flex;
     justify-content: center;
     height: 50vh;
   }
 
-  .book-details-txt{
+  .book-details-txt {
     padding: 10px;
   }
 
-  .book-details-pair{
+  .book-details-pair {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
   }
 
-  .book-details-pair p{
+  .book-details-pair p {
     padding: 10px;
     color: white;
   }
 
-  .book-details-btn{
+  .book-details-btn {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -371,13 +371,13 @@
     width: 100%;
   }
 
-  .book-details-btn button{
+  .book-details-btn button {
     width: 50%;
   }
 
   /* GRADES PAGE */
 
-  .grades-container{
+  .grades-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -387,7 +387,7 @@
 
   /* CLASS CARD */
 
-  .class-card{
+  .class-card {
     width: 100%;
     background-color: #870f54;
     border-radius: 10px;
@@ -395,13 +395,13 @@
     margin: 10px 0;
   }
 
-  .class-card-title{
+  .class-card-title {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .class-card-info{
+  .class-card-info {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -410,12 +410,31 @@
     font-weight: 700;
   }
 
-  .class-card-grades{
+  .class-card-grades {
     background-color: #4e0930;
     border-radius: 10px;
     padding: 10px;
     color: #eba904;
     font-weight: 600;
   }
-  
+
+  .semester-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .semester {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+    color: #eba904;
+    margin: 0;
+  }
 }

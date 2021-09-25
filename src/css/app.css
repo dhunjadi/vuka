@@ -102,3 +102,11 @@ a {
   background-color: #8f8f8f;
 }
 
+/* GRADES SEMESTERS */
+
+.active-semester{
+  width: 100%;
+  border: 2px solid #eba904;
+  border-radius: 10px;
+}
+
