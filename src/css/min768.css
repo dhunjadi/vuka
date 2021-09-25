@@ -439,4 +439,28 @@
     margin: 10px;
   }
 
+    /* SETTINGS PAGE */
+
+    .student-info {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      flex-wrap: wrap;
+    }
+  
+    .student-info-pair{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 100%;
+    }
+  
+    .student-info-pair p{
+      color: white;
+      font-weight: 700;
+      align-self: center;
+      margin-left: 10px;
+    }
+
 }

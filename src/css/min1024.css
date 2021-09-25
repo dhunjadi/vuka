@@ -248,27 +248,27 @@
     background-color: white;
   }
 
-     /* TASK PAGE */
+  /* TASK PAGE */
 
-     .task-card{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-color: #870f54;
-      margin: 10px 0;
-      padding: 10px;
-      border-radius: 10px;
-      width: 100%;
-    }
-  
-    .task-card-btn {
-      display: flex;
-      justify-content: center;
-      width: 50%;
-      margin: 10px auto;
-    }
+  .task-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #870f54;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+  }
 
-    /* LIBRARY PAGE */
+  .task-card-btn {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 10px auto;
+  }
+
+  /* LIBRARY PAGE */
 
   .search-container {
     display: flex;
@@ -299,7 +299,7 @@
     width: 50%;
   }
 
-  .book-container{
+  .book-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -322,14 +322,14 @@
     transition: all 0.5s ease-in-out;
   }
 
-  .book-title-container{
+  .book-title-container {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
-  .book-author-container{
+  .book-author-container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -341,52 +341,52 @@
     border-radius: 10px;
   }
 
-    /* BOOK DETAILS */
+  /* BOOK DETAILS */
 
-    .book-details-container{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-  
-    .book-details-img{
-      display: flex;
-      justify-content: center;
-      height: 50vh;
-    }
-  
-    .book-details-txt{
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .book-details-pair{
-      display: flex;
-      flex-direction: row;
-      justify-content:left;
-      align-items: center;
-    }
-  
-    .book-details-pair p{
-      padding: 10px;
-      color: white;
-    }
+  .book-details-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
-    .book-details-btn{
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-    }
-  
-    .book-details-btn button{
-      width: 20%;
-    }
+  .book-details-img {
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+  }
 
-    /* GRADES PAGE */
+  .book-details-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-  .grades-container{
+  .book-details-pair {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .book-details-pair p {
+    padding: 10px;
+    color: white;
+  }
+
+  .book-details-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  .book-details-btn button {
+    width: 20%;
+  }
+
+  /* GRADES PAGE */
+
+  .grades-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -397,7 +397,7 @@
 
   /* CLASS CARD */
 
-  .class-card{
+  .class-card {
     width: 25vw;
     background-color: #870f54;
     border-radius: 10px;
@@ -405,13 +405,13 @@
     margin: 10px 10px;
   }
 
-  .class-card-title{
+  .class-card-title {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .class-card-info{
+  .class-card-info {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -420,7 +420,7 @@
     font-weight: 700;
   }
 
-  .class-card-grades{
+  .class-card-grades {
     background-color: #4e0930;
     border-radius: 10px;
     padding: 10px;
@@ -448,4 +448,27 @@
     margin: 10px;
   }
 
+  /* SETTINGS PAGE */
+
+  .student-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+  }
+
+  .student-info-pair {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .student-info-pair p {
+    color: white;
+    font-weight: 700;
+    align-self: center;
+    margin-left: 10px;
+  }
 }

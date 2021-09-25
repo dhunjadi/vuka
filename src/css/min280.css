@@ -437,4 +437,27 @@
     color: #eba904;
     margin: 0;
   }
+
+  /* SETTINGS PAGE */
+
+  .student-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+
+  .student-info-pair{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .student-info-pair p{
+    color: white;
+    font-weight: 700;
+    align-self: center;
+    margin-left: 10px;
+  }
+
 }

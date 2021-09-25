@@ -11,6 +11,7 @@ export const UserContextProvider = ({ children }) => {
       fName: "Ivan",
       lName: "Ivanic",
       status: "student",
+      studentStatus: "Full time",
       study: "hospitality",
       year: 2,
       books : [],
