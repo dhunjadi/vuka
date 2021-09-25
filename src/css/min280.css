@@ -207,6 +207,18 @@
     cursor: pointer;
   }
 
+  /* NEWS DETAILS */
+
+  .news-details-container{
+    background-color: #870f54;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .news-details-text{
+    line-height: 1.5;
+  }
+
   /* HOMEPAGE PAGINATION */
 
   .pagination-container {

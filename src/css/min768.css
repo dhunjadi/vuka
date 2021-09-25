@@ -207,6 +207,12 @@
     cursor: pointer;
   }
 
+  /* NEWS DETAILS */
+
+  .news-details-text{
+    line-height: 1.5;
+  }
+
   /* HOMEPAGE PAGINATION */
 
   .pagination-container {

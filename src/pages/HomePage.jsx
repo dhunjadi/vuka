@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import Navbar from "../components/Navbar/Navbar";
-import newsList from "../components/News/newsList"
+import newsList from "../components/Home/newsList"
 import { v4 as uuidv4 } from "uuid";
-import NewsCard from "../components/News/NewsCard";
+import NewsCard from "../components/Home/NewsCard";
 import ReactPaginate from "react-paginate";
 import { UserContext } from "../context/UserContex";
 

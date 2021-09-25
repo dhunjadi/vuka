@@ -9,6 +9,7 @@ import LibraryPage from './pages/LibraryPage';
 import GradesPage from './pages/GradesPage';
 import SettingsPage from './pages/SettingsPage';
 import BookDetails from './components/Library/BookDetails';
+import NewsDetails from './components/Home/NewsDetails';
 
 
 
@@ -19,6 +20,7 @@ export default function App() {
             <Switch>
               <Route path="/" exact component={LoginPage} />
               <Route path="/home" exact component={HomePage} />
+              <Route path="/home/news/:id" component={NewsDetails} />
               <Route path="/tasks" exact component={TasksPage} />
               <Route path="/schedule" exact component={SchedulePage} />
               <Route path="/library" exact component={LibraryPage} />
