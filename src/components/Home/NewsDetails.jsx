@@ -1,10 +1,13 @@
 import React from "react";
+import { useContext } from "react/cjs/react.development";
+import { NewsContext } from "../../context/NewsContext";
 import Navbar from "../Navbar/Navbar";
-import newsList from "./newsList";
+
 
 export default function NewsDetails(props) {
-  const news = newsList.find((element) => element.id === props.match.params.id);
-  const { title, textFull } = news;
+  const {news} = useContext(NewsContext)
+  const newsPiece = news.find((element) => element.id === props.match.params.id);
+  const { title, textFull } = newsPiece;
 
   return (
     <div id="news-details">
