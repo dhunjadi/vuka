@@ -8,9 +8,16 @@ import { UserContext } from "../context/UserContex";
 
 export default function HomePage() {
   const [news] = useState(newsList);
+  //Pagination
   const [pageNumber, setPageNumber] = useState(0);
+  // Logged in user
   const { loggedInUser } = useContext(UserContext);
+  //News type
   const [newstype, setNewsType] = useState("general");
+  // Modal window
+  const [showNewNewsModal, setShowNewNewsModal] = useState(false)
+  const [newNewsText, setNewNewsText] = useState('')
+  const [newNewsType, setNewNewsType] = useState('General')
 
   const newsPerPage = 5;
   const pagesVisited = pageNumber * newsPerPage;
@@ -30,21 +37,20 @@ export default function HomePage() {
     setPageNumber(selected);
   };
 
+  const handleAddNewNews = () =>{
+    console.log('added')
+    setShowNewNewsModal(!showNewNewsModal)
+  }
+
   if (loggedInUser.length !== 0) {
     return (
       <div id="home">
         <Navbar />
         <div className="container">
           <div className="news-type-container">
-            <div
-              className={
-                newstype === "general"
-                  ? "news-general active-news"
-                  : "news-general"
-              }
-              onClick={() => {
-                setNewsType("general");
-              }}
+            <div 
+              className={newstype === "general" ? "news-general active-news" : "news-general"}
+              onClick={() => {setNewsType("general")}}
             >
               <h3>GENERAL</h3>
             </div>
@@ -60,6 +66,7 @@ export default function HomePage() {
             >
               <h3>{loggedInUser.study.toUpperCase()}</h3>
             </div>
+            {loggedInUser.year === 6 ? <button onClick={()=> {setShowNewNewsModal(true)}}>Add News</button> : null}
           </div>
           {displayNews}
           <ReactPaginate
@@ -73,6 +80,27 @@ export default function HomePage() {
             disabledClassName={"pagination-disabled"}
             activeClassName={"pagination-active"}
           />
+          {showNewNewsModal ? (
+          <div className="modal">
+            <div className="add-new-news-modal-title">
+              <p>Add New News</p>
+            </div>
+            <div className="add-new-news-modal-input">
+            <select value={newNewsType} onChange={(e) =>{
+              setNewNewsType(e.target.value)
+            }}>
+                <option value="general">General</option>
+                <option value="hospitality">Hospitality</option>
+                <option value="mechatronics">Mechatronics</option>
+              </select>
+              <textarea value={newNewsText} onChange={(e)=>{setNewNewsText(e.target.value)}} cols="45" rows="10" placeholder='Write news text here...'></textarea>
+            </div>
+            <div className="add-new-news-modal-btns">
+              <button onClick={handleAddNewNews}>Add</button>
+              <button onClick={() => setShowNewNewsModal(!showNewNewsModal)}>Cancel</button>
+            </div>
+          </div>
+        ) : null}
         </div>
       </div>
     );

@@ -219,6 +219,37 @@
     line-height: 1.5;
   }
 
+  /* ADD NEW NEWS MODAL */
+
+  .add-new-news-modal-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-new-news-modal-input textarea, select, option{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: #870f54;
+    border: 2px solid #870f54;
+    margin: 10px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .add-new-news-modal-input textarea:focus, select:focus{
+    outline: none;
+    border: 2px solid #4e0930;
+  }
+
+  .add-new-news-modal-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   /* HOMEPAGE PAGINATION */
 
   .pagination-container {
