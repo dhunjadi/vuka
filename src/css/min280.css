@@ -34,7 +34,7 @@
 
   form input:focus {
     outline: none;
-    border: 2px solid #eba904;
+    border: 2px solid var(--gold-light);
   }
 
   ::placeholder {
@@ -42,7 +42,7 @@
   }
 
   button {
-    background-color: #eba904;
+    background-color: var(--gold-light);
     color: #870f54;
     border: none;
     outline: none;
@@ -56,17 +56,17 @@
   }
 
   button:hover {
-    background-color: #c48d03;
+    background-color: var(--gold-dark);
   }
 
   .login-error {
-    color: #eba904;
+    color: var(--gold-light);
   }
 
   /* NAVBAR  */
 
   nav {
-    background-color: #4e0930;
+    background-color: var(--purple-dark);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -76,7 +76,7 @@
 
   .menu-list {
     background-color: #870f54;
-    border: 2px solid #eba904;
+    border: 2px solid var(--gold-light);
     border-radius: 4px;
     list-style-type: none;
     display: flex;
@@ -122,7 +122,7 @@
     font-weight: 700;
     padding: 5px 10px;
     margin-left: 20px;
-    color: #eba904;
+    color: var(--gold-light);
   }
 
   .menu-list li a.active img {
@@ -213,6 +213,7 @@
     background-color: #870f54;
     padding: 10px;
     border-radius: 10px;
+    width: 100%;
   }
 
   .news-details-text{
@@ -241,7 +242,7 @@
 
   .add-new-news-modal-input textarea:focus, select:focus{
     outline: none;
-    border: 2px solid #4e0930;
+    border: 2px solid var(--purple-dark);
   }
 
   .add-new-news-modal-btns{
@@ -273,12 +274,12 @@
   }
 
   .pagination-container a:hover {
-    color: #4e0930;
+    color: var(--purple-dark);
     background-color: white;
   }
 
   .pagination-active a {
-    color: #4e0930;
+    color: var(--purple-dark);
     background-color: white;
   }
 
@@ -327,7 +328,7 @@
 
   .search-container input:focus {
     outline: none;
-    border: 2px solid #eba904;
+    border: 2px solid var(--gold-light);
   }
 
   .search-container button {
@@ -449,15 +450,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: #eba904;
+    color: var(--gold-light);
     font-weight: 700;
   }
 
   .class-card-grades {
-    background-color: #4e0930;
+    background-color: var(--purple-dark);
     border-radius: 10px;
     padding: 10px;
-    color: #eba904;
+    color: var(--gold-light);
     font-weight: 600;
   }
 
@@ -477,7 +478,7 @@
     align-items: center;
     font-weight: 700;
     cursor: pointer;
-    color: #eba904;
+    color: var(--gold-light);
     margin: 0;
   }
 

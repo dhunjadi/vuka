@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #4e0930;
+    background-color: var(--purple-dark);
   }
 
   .logo-container {
@@ -31,8 +31,8 @@
     width: 100%;
     border: none;
     border-radius: 999px;
-    background-color: #870f54;
-    border: 2px solid #870f54;
+    background-color: var(--purple-light);
+    border: 2px solid var(--purple-light);
     margin: 10px;
     color: white;
     padding: 0 20px;
@@ -41,7 +41,7 @@
 
   form input:focus {
     outline: none;
-    border: 2px solid #eba904;
+    border: 2px solid var(--gold-light);
   }
 
   ::placeholder {
@@ -49,8 +49,8 @@
   }
 
   button {
-    background-color: #eba904;
-    color: #870f54;
+    background-color: var(--gold-light);
+    color: var(--purple-light);
     border: none;
     outline: none;
     height: 3rem;
@@ -63,17 +63,17 @@
   }
 
   button:hover {
-    background-color: #c48d03;
+    background-color: var(--gold-dark);
   }
 
   .login-error {
-    color: #eba904;
+    color: var(--gold-light);
   }
 
   /* NAVBAR  */
 
   nav {
-    background-color: #4e0930;
+    background-color: var(--purple-dark);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -133,7 +133,7 @@
     font-weight: 700;
     padding: 5px 10px;
     margin-left: 20px;
-    color: #eba904;
+    color: var(--gold-light);
   }
 
   .menu-list li a.active img {
@@ -146,7 +146,7 @@
   .menu-icon {
     display: none;
     align-self: center;
-    color: #eba904;
+    color: var(--gold-light);
   }
 
   .fas {
@@ -193,7 +193,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #870f54;
+    background-color: var(--purple-light);
     margin: 10px 0;
     padding: 10px;
     border-radius: 10px;
@@ -217,6 +217,13 @@
   }
 
   /* NEWS DETAILS */
+
+  .news-details-container{
+    background-color: var(--purple-light);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+  }
 
   .news-details-text{
     line-height: 1.5;
@@ -245,12 +252,12 @@
   }
 
   .pagination-container a:hover {
-    color: #4e0930;
+    color: var(--purple-dark);
     background-color: white;
   }
 
   .pagination-active a {
-    color: #4e0930;
+    color: var(--purple-dark);
     background-color: white;
   }
 
@@ -260,7 +267,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #870f54;
+    background-color: var(--purple-light);
     margin: 10px 0;
     padding: 10px;
     border-radius: 10px;
@@ -288,8 +295,8 @@
     height: 40px;
     border: none;
     border-radius: 999px;
-    background-color: #870f54;
-    border: 2px solid #870f54;
+    background-color: var(--purple-light);
+    border: 2px solid var(--purple-light);
     margin: 10px;
     color: white;
     padding: 0 20px;
@@ -298,7 +305,7 @@
 
   .search-container input:focus {
     outline: none;
-    border: 2px solid #eba904;
+    border: 2px solid var(--gold-light);
   }
 
   .search-container button {
@@ -319,7 +326,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #870f54;
+    background-color: var(--purple-light);
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
@@ -405,7 +412,7 @@
 
   .class-card {
     width: 25vw;
-    background-color: #870f54;
+    background-color: var(--purple-light);
     border-radius: 10px;
     padding: 10px;
     margin: 10px 10px;
@@ -422,15 +429,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: #eba904;
+    color: var(--gold-light);
     font-weight: 700;
   }
 
   .class-card-grades {
-    background-color: #4e0930;
+    background-color: var(--purple-dark);
     border-radius: 10px;
     padding: 10px;
-    color: #eba904;
+    color: var(--gold-light);
     font-weight: 600;
   }
 
@@ -450,7 +457,7 @@
     align-items: center;
     font-weight: 700;
     cursor: pointer;
-    color: #eba904;
+    color: var(--gold-light);
     margin: 10px;
   }
 

@@ -48,7 +48,6 @@ export default function HomePage() {
     };
     setNews((prevNews) => [...prevNews, newNews]);
     setShowNewNewsModal(!showNewNewsModal);
-    console.log(news);
   };
 
   if (loggedInUser.length !== 0) {
@@ -67,7 +66,7 @@ export default function HomePage() {
                 setNewsType("general");
               }}
             >
-              <h3 onClick={console.log(news)}>GENERAL</h3>
+              <h3>GENERAL</h3>
             </div>
             <div
               className={
@@ -81,7 +80,7 @@ export default function HomePage() {
             >
               <h3>{loggedInUser.study.toUpperCase()}</h3>
             </div>
-            {loggedInUser.year === 6 ? (
+            {loggedInUser.year > 5 ? (
               <button
                 onClick={() => {
                   setShowNewNewsModal(true);
