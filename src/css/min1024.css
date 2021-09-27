@@ -216,6 +216,12 @@
     cursor: pointer;
   }
 
+  .news-card-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   /* NEWS DETAILS */
 
   .news-details-container{

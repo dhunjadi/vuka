@@ -42,7 +42,7 @@ export default function HomePage() {
     const newNews = {
       id: uuidv4(),
       title: newNewsTitle,
-      text: newNewsText,
+      text: newNewsText.substring(0, 20) + '...',
       textFull: newNewsText,
       type: newNewsType.toLowerCase(),
     };
