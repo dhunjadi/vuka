@@ -126,13 +126,13 @@ export default function HomePage() {
                   <option value="mechatronics">Mechatronics</option>
                 </select>
                 <textarea
-                  value={newNewsText}
                   onChange={(e) => {
                     setNewNewsText(e.target.value);
                   }}
                   cols="45"
                   rows="10"
                   placeholder="Write news text here..."
+                  value={newNewsText}
                 ></textarea>
               </div>
               <div className="add-new-news-modal-btns">
