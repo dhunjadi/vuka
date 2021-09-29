@@ -19,6 +19,9 @@ export default function AddNewsModal(props) {
     };
     setNews((prevNews) => [...prevNews, newNews]);
     setShowNewNewsModal(!showNewNewsModal);
+    setNewNewsTitle("")
+    setNewNewsText("")
+    setNewNewsType("General")
   };
 
   return (

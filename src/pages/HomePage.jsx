@@ -66,7 +66,7 @@ export default function HomePage() {
             >
               <h3>{loggedInUser.study.toUpperCase()}</h3>
             </div>
-            {loggedInUser.year && (
+            {loggedInUser.year > 5 && (
               <button
                 onClick={() => {
                   setShowNewNewsModal(true);
