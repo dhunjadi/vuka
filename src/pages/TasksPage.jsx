@@ -2,18 +2,33 @@ import React, { useContext } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import TaskCard from "../components/Tasks/TaskCard";
 import { UserContext } from "../context/UserContex";
-import { TaskContext } from "../context/TaskContext"; 
+import { TaskContext } from "../context/TaskContext";
 import { v4 as uuidv4 } from "uuid";
 
 export default function TasksPage() {
   const { loggedInUser } = useContext(UserContext);
-  const { taskList } = useContext(TaskContext)
+  const { taskList,  handleCreateTask } = useContext(TaskContext);
 
-  const filtered = taskList.filter((task) => {
-    return task.study === loggedInUser.study && task.year <= loggedInUser.year && task.published === true;
+  // Filtering tasks for students (based on student's study program, study year and whether the task is published or not)
+  const filteredStudents = taskList.filter((task) => {
+    return (
+      task.study === loggedInUser.study &&
+      task.year <= loggedInUser.year &&
+      task.published === true
+    );
   });
 
-  const displayTasks = filtered
+  // Displayign published tasks for students
+  const displayTasksStudents = filteredStudents
+    .sort((a, b) => {
+      return b.year - a.year;
+    })
+    .map((taskCard) => {
+      return <TaskCard key={uuidv4()} taskCard={taskCard} />;
+    });
+
+  // Displaying all tasks so professors and admin can add, remove or edit, publish and unpublish tasks for students
+  const displayTasksProfAndAdmin = taskList
     .sort((a, b) => {
       return b.year - a.year;
     })
@@ -28,11 +43,13 @@ export default function TasksPage() {
         <div className="container">
           {loggedInUser.year > 5 && (
             <div className="task-page-btns-container">
-              <button>Add New Task</button>
+              <button onClick={handleCreateTask}>Create New Task</button>
             </div>
           )}
 
-          {displayTasks}
+          {loggedInUser.year < 6
+            ? displayTasksStudents
+            : displayTasksProfAndAdmin}
         </div>
       </div>
     );

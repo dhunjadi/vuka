@@ -386,11 +386,17 @@
     transition: all 0.5s ease-in-out;
   }
 
-  .task-card-btn {
+  .task-card-btns {
     display: flex;
     justify-content: center;
     width: 100%;
     margin: 10px auto;
+  }
+
+  .task-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   /* LIBRARY PAGE */

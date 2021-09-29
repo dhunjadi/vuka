@@ -396,11 +396,17 @@
     width: 100%;
   }
 
-  .task-card-btn {
+  .task-card-btns {
     display: flex;
     justify-content: center;
     width: 50%;
     margin: 10px auto;
+  }
+
+  .task-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   /* LIBRARY PAGE */

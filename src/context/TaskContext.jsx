@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 export const TaskContext = createContext();
 
@@ -108,9 +109,28 @@ export const TaskContextProvider = ({ children }) => {
     localStorage.setItem("my-tasks", JSON.stringify(taskList));
   });
 
+  const handleCreateTask = () =>{
+      const newTask = {
+        id: uuidv4(),
+        title: 'New Task Title',
+        text: 'New Task Text',
+        study: 'New Task Study',
+        subject: 'New Task Subject',
+        year: 'New Task Year',
+        published: false
+      }
+      setTaskList([...taskList, newTask])
+  }
+
+  const handleDeleteTask = (id) =>{
+    setTaskList(taskList.filter(task => task.id !== id))
+  }
+
   const taskContextValue = {
     taskList,
     setTaskList,
+    handleCreateTask,
+    handleDeleteTask
   };
 
   return (
