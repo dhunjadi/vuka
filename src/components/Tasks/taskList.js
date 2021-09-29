@@ -5,7 +5,8 @@ const  taskList = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
         study: "hospitality",
         subject: "economics",
-        year: 1
+        year: 1,
+        published: true
     },
     {
         id: 2,
@@ -13,7 +14,8 @@ const  taskList = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
         study: "hospitality",
         subject: "tourism",
-        year: 1
+        year: 1,
+        published: true
     },
     {
         id: 3,
@@ -21,7 +23,8 @@ const  taskList = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
         study: "mechatronics",
         subject: "mechanics",
-        year: 1
+        year: 1,
+        published: true
     },
     {
         id: 4,
@@ -29,7 +32,8 @@ const  taskList = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
         study: "mechatronics",
         subject: "mechanics",
-        year: 1
+        year: 1,
+        published: true
     },
     {
         id: 5,
@@ -37,7 +41,8 @@ const  taskList = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
         study: "hospitality",
         subject: "economics",
-        year: 3
+        year: 3,
+        published: true
     },
     {
         id: 6,
@@ -45,7 +50,8 @@ const  taskList = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
         study: "hospitality",
         subject: "economics",
-        year: 2
+        year: 2,
+        published: true
     },
     {
         id: 7,
@@ -53,7 +59,8 @@ const  taskList = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
         study: "mechatronics",
         subject: "mechanics",
-        year: 1
+        year: 1,
+        published: true
     },
     {
         id: 8,
@@ -61,7 +68,8 @@ const  taskList = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
         study: "mechatronics",
         subject: "mechanics",
-        year: 3
+        year: 3,
+        published: true
     },
     {
         id: 9,
@@ -69,7 +77,8 @@ const  taskList = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
         study: "mechatronics",
         subject: "mechanics",
-        year: 2
+        year: 2,
+        published: true
     },
     {
         id: 10,
@@ -77,7 +86,8 @@ const  taskList = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
         study: "hospitality",
         subject: "economics",
-        year: 1
+        year: 1,
+        published: true
     }
 ]
 

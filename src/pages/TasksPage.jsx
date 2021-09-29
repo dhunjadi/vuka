@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
 import Navbar from "../components/Navbar/Navbar";
-import taskList from "../components/Tasks/taskList"
 import TaskCard from "../components/Tasks/TaskCard";
 import { UserContext } from "../context/UserContex";
+import { TaskContext } from "../context/TaskContext"; 
 import { v4 as uuidv4 } from "uuid";
 
 export default function TasksPage() {
   const { loggedInUser } = useContext(UserContext);
+  const { taskList } = useContext(TaskContext)
 
   const filtered = taskList.filter((task) => {
-    return task.study === loggedInUser.study && task.year <= loggedInUser.year;
+    return task.study === loggedInUser.study && task.year <= loggedInUser.year && task.published === true;
   });
 
   const displayTasks = filtered
@@ -24,7 +25,15 @@ export default function TasksPage() {
     return (
       <div id="tasks">
         <Navbar />
-        <div className="container">{displayTasks}</div>
+        <div className="container">
+          {loggedInUser.year > 5 && (
+            <div className="task-page-btns-container">
+              <button>Add New Task</button>
+            </div>
+          )}
+
+          {displayTasks}
+        </div>
       </div>
     );
   } else {
