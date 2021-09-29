@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "../../context/UserContex";
 import { TaskContext } from "../../context/TaskContext";
+import EditTaskModal from './EditTaskModal'
 
 export default function TaskCard({ taskCard }) {
   const { study, title, text, subject, year, id } = taskCard;
