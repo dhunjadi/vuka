@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 export const TaskContext = createContext();
 
 export const TaskContextProvider = ({ children }) => {
+  const [selectedTaskId, setSelectedTaskId] = useState();
   const [taskList, setTaskList] = useState([
     {
       id: 1,
@@ -97,7 +98,6 @@ export const TaskContextProvider = ({ children }) => {
     },
   ]);
 
-
   useEffect(() => {
     const data = localStorage.getItem("my-tasks");
     if (data) {
@@ -109,28 +109,44 @@ export const TaskContextProvider = ({ children }) => {
     localStorage.setItem("my-tasks", JSON.stringify(taskList));
   });
 
-  const handleCreateTask = () =>{
-      const newTask = {
-        id: uuidv4(),
-        title: 'New Task Title',
-        text: 'New Task Text',
-        study: 'New Task Study',
-        subject: 'New Task Subject',
-        year: 'New Task Year',
-        published: false
-      }
-      setTaskList([...taskList, newTask])
+  const handleCreateTask = () => {
+    const newTask = {
+      id: uuidv4(),
+      title: "New Task Title",
+      text: "New Task Text",
+      study: "New Task Study",
+      subject: "New Task Subject",
+      year: "New Task Year",
+      published: false,
+    };
+    setTaskList([...taskList, newTask]);
+  };
+
+  const handleDeleteTask = (id) => {
+    setTaskList(taskList.filter((task) => task.id !== id));
+  };
+
+  const selectedTaskinfo = taskList.find(task => task.id === selectedTaskId)
+
+  const handleTaskSelect = (id) => {
+    setSelectedTaskId(id)
   }
 
-  const handleDeleteTask = (id) =>{
-    setTaskList(taskList.filter(task => task.id !== id))
+  const handleTaskChange = (id, task) => {
+    const newTasks = [...taskList]
+    const index = newTasks.findIndex(x => x.id === id)
+    newTasks[index] = task
+    setTaskList(newTasks)
   }
 
   const taskContextValue = {
     taskList,
     setTaskList,
     handleCreateTask,
-    handleDeleteTask
+    handleDeleteTask,
+    handleTaskSelect,
+    selectedTaskinfo,
+    handleTaskChange
   };
 
   return (

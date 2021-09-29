@@ -6,7 +6,7 @@ import EditTaskModal from './EditTaskModal'
 export default function TaskCard({ taskCard }) {
   const { study, title, text, subject, year, id } = taskCard;
   const { loggedInUser } = useContext(UserContext);
-  const { handleDeleteTask } = useContext(TaskContext);
+  const { handleDeleteTask, handleTaskSelect, selectedTaskinfo } = useContext(TaskContext);
   const [completed, setCompleted] = useState(false);
 
   return (
@@ -36,11 +36,15 @@ export default function TaskCard({ taskCard }) {
           </button>
         ) : (
           <>
-            <button>Edit Task</button>
+            <button onClick={()=> handleTaskSelect(id)}>Edit Task</button>
             <button onClick={() => handleDeleteTask(id)}>Delete Task</button>
           </>
         )}
       </div>
+      {selectedTaskinfo && 
+      <EditTaskModal 
+      selectedTaskinfo={selectedTaskinfo}
+      />}
     </div>
   );
 }
