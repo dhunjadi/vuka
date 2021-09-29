@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import "./css/app.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoginPage from './pages/LoginPage';
@@ -10,10 +10,13 @@ import GradesPage from './pages/GradesPage';
 import SettingsPage from './pages/SettingsPage';
 import BookDetails from './components/Library/BookDetails';
 import NewsDetails from './components/Home/NewsDetails';
+import { TaskContext } from './context/TaskContext';
+import EditTaskModal from './components/Tasks/EditTaskModal';
 
 
 
 export default function App() {
+  const { selectedTaskinfo } = useContext(TaskContext);
   return (
     <div className='App'>
       <Router>
@@ -29,6 +32,10 @@ export default function App() {
               <Route path="/settings" exact component={SettingsPage} />
             </Switch>
           </Router>
+          {selectedTaskinfo && 
+      <EditTaskModal 
+      selectedTaskinfo={selectedTaskinfo}
+      />}
     </div>
   )
 }

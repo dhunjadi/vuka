@@ -17,6 +17,10 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.App{
+  height: 100vh;
+}
+
 /* PAGES */
 
 #login-page {

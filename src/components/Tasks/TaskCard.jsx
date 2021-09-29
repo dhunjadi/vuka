@@ -1,12 +1,11 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "../../context/UserContex";
 import { TaskContext } from "../../context/TaskContext";
-import EditTaskModal from './EditTaskModal'
 
 export default function TaskCard({ taskCard }) {
   const { study, title, text, subject, year, id } = taskCard;
   const { loggedInUser } = useContext(UserContext);
-  const { handleDeleteTask, handleTaskSelect, selectedTaskinfo } = useContext(TaskContext);
+  const { handleDeleteTask, handleTaskSelect,  } = useContext(TaskContext);
   const [completed, setCompleted] = useState(false);
 
   return (
@@ -41,10 +40,7 @@ export default function TaskCard({ taskCard }) {
           </>
         )}
       </div>
-      {selectedTaskinfo && 
-      <EditTaskModal 
-      selectedTaskinfo={selectedTaskinfo}
-      />}
+
     </div>
   );
 }
