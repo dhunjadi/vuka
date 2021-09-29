@@ -216,7 +216,7 @@
     cursor: pointer;
   }
 
-  .news-card-btns{
+  .news-card-btns {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -224,15 +224,131 @@
 
   /* NEWS DETAILS */
 
-  .news-details-container{
+  .news-details-container {
     background-color: var(--purple-light);
     padding: 10px;
     border-radius: 10px;
     width: 100%;
   }
 
-  .news-details-text{
+  .news-details-text {
     line-height: 1.5;
+  }
+
+  /* ADD NEW NEWS MODAL */
+
+  .add-new-news-modal-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-new-news-modal-title input {
+    color: white;
+    background-color: var(--purple-light);
+    border: 2px solid var(--purple-light);
+    border-radius: 10px;
+  }
+
+  .add-new-news-modal-title input:focus {
+    outline: none;
+    border: 2px solid var(--purple-dark);
+  }
+
+  .add-new-news-modal-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-new-news-modal-input textarea,
+  select,
+  option {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--purple-light);
+    border: 2px solid var(--purple-light);
+    margin: 10px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .add-new-news-modal-input textarea:focus,
+  select:focus {
+    outline: none;
+    border: 2px solid var(--purple-dark);
+  }
+
+  .add-new-news-modal-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* DELETE NEWS MODAL */
+
+  .delete-news-modal-title, .delete-news-modal-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .delete-news-modal-title h1{
+    color: var(--purple-light);
+  }
+
+  /* EDIT NEWS MODAL */
+
+  .edit-news-modal-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .edit-news-modal-title input{
+    color: white;
+    background-color: var(--purple-light);
+    border: 2px solid var(--purple-light);
+    border-radius: 10px;
+  }
+
+  .edit-news-modal-title input:focus{
+    outline: none;
+    border: 2px solid var(--purple-dark);
+  }
+
+  .edit-news-modal-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .edit-news-modal-input textarea, select, option{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--purple-light);
+    border: 2px solid var(--purple-light);
+    margin: 10px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .edit-news-modal-input textarea:focus, select:focus{
+    outline: none;
+    border: 2px solid var(--purple-dark);
+  }
+
+  .edit-news-modal-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   /* HOMEPAGE PAGINATION */

@@ -53,12 +53,14 @@ export default function NewsCard({ newsCard }) {
         />
       )}
 
-      {showEditNewsModal && (
+      {selectedNewsId && (
         <EditNewsModal
           showEditNewsModal={showEditNewsModal}
           setShowEditNewsModal={setShowEditNewsModal}
           info={selectedNews}
           handleNewsChange={handleNewsChange}
+          selectedNewsId={selectedNewsId}
+          setSelectedNewsId={setSelectedNewsId}
         />
       )}
     </div>

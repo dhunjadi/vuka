@@ -66,7 +66,7 @@ export default function HomePage() {
             >
               <h3>{loggedInUser.study.toUpperCase()}</h3>
             </div>
-            {loggedInUser.year > 5 ? (
+            {loggedInUser.year && (
               <button
                 onClick={() => {
                   setShowNewNewsModal(true);
@@ -74,7 +74,7 @@ export default function HomePage() {
               >
                 Add News
               </button>
-            ) : null}
+            )}
           </div>
           {displayNews}
           <ReactPaginate

@@ -207,7 +207,7 @@
     cursor: pointer;
   }
 
-  .news-card-btns{
+  .news-card-btns {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -215,17 +215,133 @@
 
   /* NEWS DETAILS */
 
-  .news-details-container{
+  .news-details-container {
     background-color: var(--purple-light);
     padding: 10px;
     border-radius: 10px;
     width: 100%;
   }
 
-  .news-details-text{
+  .news-details-text {
     line-height: 1.5;
   }
 
+  /* ADD NEW NEWS MODAL */
+
+  .add-new-news-modal-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-new-news-modal-title input {
+    color: white;
+    background-color: var(--purple-light);
+    border: 2px solid var(--purple-light);
+    border-radius: 10px;
+  }
+
+  .add-new-news-modal-title input:focus {
+    outline: none;
+    border: 2px solid var(--purple-dark);
+  }
+
+  .add-new-news-modal-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-new-news-modal-input textarea,
+  select,
+  option {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--purple-light);
+    border: 2px solid var(--purple-light);
+    margin: 10px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .add-new-news-modal-input textarea:focus,
+  select:focus {
+    outline: none;
+    border: 2px solid var(--purple-dark);
+  }
+
+  .add-new-news-modal-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+   /* DELETE NEWS MODAL */
+
+   .delete-news-modal-title, .delete-news-modal-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .delete-news-modal-title h1{
+    color: var(--purple-light);
+  }
+
+  /* EDIT NEWS MODAL */
+
+  .edit-news-modal-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .edit-news-modal-title input{
+    color: white;
+    background-color: var(--purple-light);
+    border: 2px solid var(--purple-light);
+    border-radius: 10px;
+  }
+
+  .edit-news-modal-title input:focus{
+    outline: none;
+    border: 2px solid var(--purple-dark);
+  }
+
+  .edit-news-modal-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .edit-news-modal-input textarea, select, option{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--purple-light);
+    border: 2px solid var(--purple-light);
+    margin: 10px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .edit-news-modal-input textarea:focus, select:focus{
+    outline: none;
+    border: 2px solid var(--purple-dark);
+  }
+
+  .edit-news-modal-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
   /* HOMEPAGE PAGINATION */
 
   .pagination-container {
@@ -258,9 +374,9 @@
     background-color: white;
   }
 
-   /* TASK PAGE */
+  /* TASK PAGE */
 
-  .task-card{
+  .task-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -309,7 +425,7 @@
     width: 50%;
   }
 
-  .book-container{
+  .book-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -332,14 +448,14 @@
     transition: all 0.5s ease-in-out;
   }
 
-  .book-title-container{
+  .book-title-container {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
-  .book-author-container{
+  .book-author-container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -351,38 +467,38 @@
     border-radius: 10px;
   }
 
-   /* BOOK DETAILS */
+  /* BOOK DETAILS */
 
-   .book-details-container{
+  .book-details-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .book-details-img{
+  .book-details-img {
     display: flex;
     justify-content: center;
     height: 50vh;
   }
 
-  .book-details-txt{
+  .book-details-txt {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .book-details-pair{
+  .book-details-pair {
     display: flex;
     flex-direction: row;
-    justify-content:left;
+    justify-content: left;
     align-items: center;
   }
 
-  .book-details-pair p{
+  .book-details-pair p {
     padding: 10px;
     color: white;
   }
 
-  .book-details-btn{
+  .book-details-btn {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -390,13 +506,13 @@
     width: 100%;
   }
 
-  .book-details-btn button{
+  .book-details-btn button {
     width: 40%;
   }
 
   /* GRADES PAGE */
 
-  .grades-container{
+  .grades-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -407,7 +523,7 @@
 
   /* CLASS CARD */
 
-  .class-card{
+  .class-card {
     width: 35vw;
     background-color: var(--purple-light);
     border-radius: 10px;
@@ -415,13 +531,13 @@
     margin: 10px 10px;
   }
 
-  .class-card-title{
+  .class-card-title {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .class-card-info{
+  .class-card-info {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -430,7 +546,7 @@
     font-weight: 700;
   }
 
-  .class-card-grades{
+  .class-card-grades {
     background-color: var(--purple-dark);
     border-radius: 10px;
     padding: 10px;
@@ -458,28 +574,27 @@
     margin: 10px;
   }
 
-    /* SETTINGS PAGE */
+  /* SETTINGS PAGE */
 
-    .student-info {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: left;
-      flex-wrap: wrap;
-    }
-  
-    .student-info-pair{
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      width: 100%;
-    }
-  
-    .student-info-pair p{
-      color: white;
-      font-weight: 700;
-      align-self: center;
-      margin-left: 10px;
-    }
+  .student-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+  }
 
+  .student-info-pair {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .student-info-pair p {
+    color: white;
+    font-weight: 700;
+    align-self: center;
+    margin-left: 10px;
+  }
 }

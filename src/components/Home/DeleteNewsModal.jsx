@@ -3,7 +3,7 @@ import { NewsContext } from '../../context/NewsContext';
 
 
 export default function DeleteNewsModal(props) {
-    const {title, setShowDeleteNewsModal, showDeleteNewsModal, newsPiece } = props
+    const { setShowDeleteNewsModal, showDeleteNewsModal, newsPiece } = props
     const {news, setNews} = useContext(NewsContext)
 
     const handleConfirmNewsDelete = (newsToRemove) => {
@@ -12,7 +12,7 @@ export default function DeleteNewsModal(props) {
     return (
         <div className="modal">
           <div className="delete-news-modal-title">
-            <h1>Are you sure you want to delete {title}?</h1>
+            <h1>Are you sure you want to delete {newsPiece.title}?</h1>
           </div>
           <div className="delete-news-modal-btns">
             <button onClick={() => handleConfirmNewsDelete(newsPiece)}>
