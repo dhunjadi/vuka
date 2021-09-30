@@ -26,6 +26,7 @@ export default function EditNews({ selectedNewsinfo }) {
           <option value="general">General</option>
           <option value="hospitality">Hospitality</option>
           <option value="mechatronics">Mechatronics</option>
+          <option value="professor">Professor</option>
         </select>
         <textarea
           cols="45"

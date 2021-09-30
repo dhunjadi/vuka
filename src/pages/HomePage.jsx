@@ -64,20 +64,23 @@ export default function HomePage() {
                 setNewsType("general");
               }}
             >
-              <h3>GENERAL</h3>
+              <h3>{loggedInUser.year < 6 ? 'GENERAL' : 'STUDENT NEWS'}</h3>
             </div>
+            {loggedInUser.year < 6 &&
             <div
-              className={
-                newstype === loggedInUser.study
-                  ? "news-study active-news"
-                  : "news-study"
-              }
-              onClick={() => {
-                setNewsType(loggedInUser.study);
-              }}
-            >
-              <h3>{loggedInUser.study.toUpperCase()}</h3>
-            </div>
+            className={
+              newstype === loggedInUser.study
+                ? "news-study active-news"
+                : "news-study"
+            }
+            onClick={() => {
+              setNewsType(loggedInUser.study);
+            }}
+          >
+            <h3>{loggedInUser.study.toUpperCase()}</h3>
+          </div>
+            }
+            
             {loggedInUser.year > 5 && (
               <button onClick={handleNewsAdd}>Add News</button>
             )}

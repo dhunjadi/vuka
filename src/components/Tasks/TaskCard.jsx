@@ -12,11 +12,11 @@ export default function TaskCard({ taskCard }) {
     <div className={completed ? "task-card task-card-completed" : "task-card"}>
       <h1 className="task-card-title">{title}</h1>
       <div className="task-info">
-        {loggedInUser.year > 5 ? (
+        {loggedInUser.year > 5 && (
           <span>
             Study Program: {study.charAt(0).toUpperCase() + study.slice(1)}
           </span>
-        ) : null}
+        )}
         <span>
           Subject: {subject.charAt(0).toUpperCase() + subject.slice(1)}
         </span>
