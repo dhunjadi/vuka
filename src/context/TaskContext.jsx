@@ -5,19 +5,10 @@ import taskList from "../components/Tasks/taskList";
 export const TaskContext = createContext();
 
 export const TaskContextProvider = ({ children }) => {
-  const [selectedTaskId, setSelectedTaskId] = useState();
   const [tasks, setTasks] = useState(taskList);
+  const [selectedTaskId, setSelectedTaskId] = useState();
 
-  useEffect(() => {
-    const data = localStorage.getItem("my-tasks");
-    if (data) {
-      setTasks(JSON.parse(data));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("my-tasks", JSON.stringify(tasks));
-  });
+  const selectedTaskinfo = tasks.find(task => task.id === selectedTaskId)
 
   const handleCreateTask = () => {
     const newTask = {
@@ -36,7 +27,6 @@ export const TaskContextProvider = ({ children }) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
-  const selectedTaskinfo = tasks.find(task => task.id === selectedTaskId)
 
   const handleTaskSelect = (id) => {
     setSelectedTaskId(id)
@@ -48,6 +38,17 @@ export const TaskContextProvider = ({ children }) => {
     newTasks[index] = task
     setTasks(newTasks)
   }
+
+  useEffect(() => {
+    const data = localStorage.getItem("my-tasks");
+    if (data) {
+      setTasks(JSON.parse(data));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("my-tasks", JSON.stringify(tasks));
+  });
 
   const taskContextValue = {
     tasks,

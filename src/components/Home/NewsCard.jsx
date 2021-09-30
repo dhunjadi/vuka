@@ -1,32 +1,14 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../context/UserContex";
-import EditNewsModal from "./EditNewsModal";
 import { NewsContext } from "../../context/NewsContext";
 
 export default function NewsCard({ newsCard }) {
   const { loggedInUser } = useContext(UserContext);
-  const {news, setNews, handleNewsDelete} = useContext(NewsContext)
+  const { handleNewsDelete, handleNewsSelect} = useContext(NewsContext)
   const { title, text, id } = newsCard;
 
-  // Modals states
-  const [showEditNewsModal, setShowEditNewsModal] = useState(false);
 
-  //Selected News ID
-  const [selectedNewsId, setSelectedNewsId] = useState()
-  const selectedNews = news.find(element => element.id === selectedNewsId)
-
-  const handleNewsSelect = (id) => {
-    setSelectedNewsId(id)
-    setShowEditNewsModal(true)
-  }
-
-  const handleNewsChange = (id, njuz) => {
-    const newNews = [...news]
-    const index = newNews.findIndex(x => x.id === id)
-    newNews[index] = njuz
-    setNews(newNews)
-  }
 
 
   return (
@@ -40,16 +22,6 @@ export default function NewsCard({ newsCard }) {
           <button onClick={() => handleNewsSelect(id)}>Edit</button>
           <button onClick={()=> handleNewsDelete(id)}>Delete</button>
         </div>
-      )}
-      {selectedNewsId && (
-        <EditNewsModal
-          showEditNewsModal={showEditNewsModal}
-          setShowEditNewsModal={setShowEditNewsModal}
-          info={selectedNews}
-          handleNewsChange={handleNewsChange}
-          selectedNewsId={selectedNewsId}
-          setSelectedNewsId={setSelectedNewsId}
-        />
       )}
     </div>
   );

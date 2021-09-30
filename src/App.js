@@ -11,12 +11,15 @@ import SettingsPage from './pages/SettingsPage';
 import BookDetails from './components/Library/BookDetails';
 import NewsDetails from './components/Home/NewsDetails';
 import { TaskContext } from './context/TaskContext';
+import { NewsContext } from './context/NewsContext';
 import EditTaskModal from './components/Tasks/EditTaskModal';
+import EditNewsModal from './components/Home/EditNewsModal'
 
 
 
 export default function App() {
   const { selectedTaskinfo } = useContext(TaskContext);
+  const { selectedNewsinfo } = useContext(NewsContext)
   return (
     <div className='App'>
       <Router>
@@ -33,9 +36,13 @@ export default function App() {
             </Switch>
           </Router>
           {selectedTaskinfo && 
-      <EditTaskModal 
-      selectedTaskinfo={selectedTaskinfo}
-      />}
+            <EditTaskModal 
+              selectedTaskinfo={selectedTaskinfo}
+            />}
+            {selectedNewsinfo &&
+            <EditNewsModal 
+              selectedNewsinfo={selectedNewsinfo}
+            />}
     </div>
   )
 }

@@ -6,6 +6,10 @@ export const NewsContext = createContext();
 
 export const NewsContextProvider = ({ children }) => {
   const [news, setNews] = useState(newsList);
+  const [selectedNewsId, setSelectedNewsId] = useState()
+
+  const selectedNewsinfo = news.find(news => news.id ===  selectedNewsId)
+
 
   const handleNewsAdd = () => {
     const newNews = {
@@ -20,6 +24,17 @@ export const NewsContextProvider = ({ children }) => {
 
   const handleNewsDelete = (id) =>{
     setNews(news.filter(news=> news.id !== id))
+  }
+
+  const handleNewsSelect = (id) => {
+    setSelectedNewsId(id)
+  }
+
+  const handleNewsChange = (id, njuz) => {
+    const newNews = [...news]
+    const index = newNews.findIndex(x => x.id === id)
+    newNews[index] = njuz
+    setNews(newNews)
   }
 
   useEffect(() => {
@@ -37,7 +52,10 @@ export const NewsContextProvider = ({ children }) => {
     news,
     setNews,
     handleNewsAdd,
-    handleNewsDelete
+    handleNewsDelete,
+    handleNewsSelect,
+    selectedNewsinfo,
+    handleNewsChange
   }
 
   return (

@@ -33,14 +33,14 @@ export default function HomePage() {
 
   // Displaying all news so professors and admin can add, remove or edit, publish and unpublish news for students
   const displayNewsProfAndAdmin = news
-  .slice(pagesVisited, pagesVisited + newsPerPage)
-  .map((newsCard) => {
-    return <NewsCard key={uuidv4()} newsCard={newsCard} />;
-  });
-
+    .slice(pagesVisited, pagesVisited + newsPerPage)
+    .map((newsCard) => {
+      return <NewsCard key={uuidv4()} newsCard={newsCard} />;
+    });
 
   // Page count for displaying news for students
   const pageCountStudents = Math.ceil(filteredStudents.length / newsPerPage);
+
   // Page count for displaying news for šrpfessors and admin
   const pageCountProfAndAdmin = Math.ceil(news.length / newsPerPage);
 
@@ -82,13 +82,15 @@ export default function HomePage() {
               <button onClick={handleNewsAdd}>Add News</button>
             )}
           </div>
-          {loggedInUser.year < 6 ?
-           displayNewsStudents
-          : displayNewsProfAndAdmin}
+          {loggedInUser.year < 6
+            ? displayNewsStudents
+            : displayNewsProfAndAdmin}
           <ReactPaginate
             previousLabel={"<"}
             nextLabel={">"}
-            pageCount={ loggedInUser.year < 6 ? pageCountStudents : pageCountProfAndAdmin}
+            pageCount={
+              loggedInUser.year < 6 ? pageCountStudents : pageCountProfAndAdmin
+            }
             onPageChange={handlePageChange}
             containerClassName={"pagination-container"}
             previousLinkClassName={"previous-btn"}
