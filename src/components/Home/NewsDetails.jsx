@@ -7,7 +7,7 @@ import Navbar from "../Navbar/Navbar";
 export default function NewsDetails(props) {
   const {news} = useContext(NewsContext)
   const newsPiece = news.find((element) => element.id === props.match.params.id);
-  const { title, textFull } = newsPiece;
+  const { title, text } = newsPiece;
 
   return (
     <div id="news-details">
@@ -18,7 +18,7 @@ export default function NewsDetails(props) {
             <h1>{title}</h1>
           </div>
           <div className="news-details-text">
-            <p>{textFull}</p>
+            <p>{text}</p>
           </div>
         </div>
       </div>

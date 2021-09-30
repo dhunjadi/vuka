@@ -7,10 +7,10 @@ import { v4 as uuidv4 } from "uuid";
 
 export default function TasksPage() {
   const { loggedInUser } = useContext(UserContext);
-  const { taskList,  handleCreateTask } = useContext(TaskContext);
+  const { tasks,  handleCreateTask } = useContext(TaskContext);
 
-  // Filtering tasks for students (based on student's study program, study year and whether the task is published or not)
-  const filteredStudents = taskList.filter((task) => {
+  // Filtering tasks for students (based on their study program, study year and whether the task is published or not)
+  const filteredStudents = tasks.filter((task) => {
     return (
       task.study === loggedInUser.study &&
       task.year <= loggedInUser.year &&
@@ -18,7 +18,7 @@ export default function TasksPage() {
     );
   });
 
-  // Displayign published tasks for students
+  // Displaying published tasks for students
   const displayTasksStudents = filteredStudents
     .sort((a, b) => {
       return b.year - a.year;
@@ -28,7 +28,7 @@ export default function TasksPage() {
     });
 
   // Displaying all tasks so professors and admin can add, remove or edit, publish and unpublish tasks for students
-  const displayTasksProfAndAdmin = taskList
+  const displayTasksProfAndAdmin = tasks
     .sort((a, b) => {
       return b.year - a.year;
     })

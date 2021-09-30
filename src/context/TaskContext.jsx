@@ -1,112 +1,22 @@
 import { createContext, useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import taskList from "../components/Tasks/taskList";
 
 export const TaskContext = createContext();
 
 export const TaskContextProvider = ({ children }) => {
   const [selectedTaskId, setSelectedTaskId] = useState();
-  const [taskList, setTaskList] = useState([
-    {
-      id: 1,
-      title: "task title1",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
-      study: "hospitality",
-      subject: "economics",
-      year: 1,
-      published: true,
-    },
-    {
-      id: 2,
-      title: "task title2",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
-      study: "hospitality",
-      subject: "tourism",
-      year: 1,
-      published: true,
-    },
-    {
-      id: 3,
-      title: "task title3",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
-      study: "mechatronics",
-      subject: "mechanics",
-      year: 1,
-      published: true,
-    },
-    {
-      id: 4,
-      title: "task title4",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
-      study: "mechatronics",
-      subject: "mechanics",
-      year: 1,
-      published: true,
-    },
-    {
-      id: 5,
-      title: "task title5",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
-      study: "hospitality",
-      subject: "economics",
-      year: 3,
-      published: true,
-    },
-    {
-      id: 6,
-      title: "task title6",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
-      study: "hospitality",
-      subject: "economics",
-      year: 2,
-      published: true,
-    },
-    {
-      id: 7,
-      title: "task title7",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
-      study: "mechatronics",
-      subject: "mechanics",
-      year: 1,
-      published: true,
-    },
-    {
-      id: 8,
-      title: "task title8",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
-      study: "mechatronics",
-      subject: "mechanics",
-      year: 3,
-      published: true,
-    },
-    {
-      id: 9,
-      title: "task title9",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
-      study: "mechatronics",
-      subject: "mechanics",
-      year: 2,
-      published: true,
-    },
-    {
-      id: 10,
-      title: "task title10",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi mollitia possimus a temporibus ipsam laboriosam in aperiam quos maxime est illo dicta corporis, id quia consectetur magnam, error quisquam totam eum perferendis, quo ea enim? Ipsam iste totam dignissimos laborum quo perferendis recusandae ut, quasi vitae hic nostrum ullam?",
-      study: "hospitality",
-      subject: "economics",
-      year: 1,
-      published: true,
-    },
-  ]);
+  const [tasks, setTasks] = useState(taskList);
 
   useEffect(() => {
     const data = localStorage.getItem("my-tasks");
     if (data) {
-      setTaskList(JSON.parse(data));
+      setTasks(JSON.parse(data));
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("my-tasks", JSON.stringify(taskList));
+    localStorage.setItem("my-tasks", JSON.stringify(tasks));
   });
 
   const handleCreateTask = () => {
@@ -119,29 +29,29 @@ export const TaskContextProvider = ({ children }) => {
       year: "New Task Year",
       published: false,
     };
-    setTaskList([...taskList, newTask]);
+    setTasks([...tasks, newTask]);
   };
 
   const handleDeleteTask = (id) => {
-    setTaskList(taskList.filter((task) => task.id !== id));
+    setTasks(tasks.filter((task) => task.id !== id));
   };
 
-  const selectedTaskinfo = taskList.find(task => task.id === selectedTaskId)
+  const selectedTaskinfo = tasks.find(task => task.id === selectedTaskId)
 
   const handleTaskSelect = (id) => {
     setSelectedTaskId(id)
   }
 
   const handleTaskChange = (id, task) => {
-    const newTasks = [...taskList]
+    const newTasks = [...tasks]
     const index = newTasks.findIndex(x => x.id === id)
     newTasks[index] = task
-    setTaskList(newTasks)
+    setTasks(newTasks)
   }
 
   const taskContextValue = {
-    taskList,
-    setTaskList,
+    tasks,
+    setTasks,
     handleCreateTask,
     handleDeleteTask,
     handleTaskSelect,

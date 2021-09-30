@@ -5,33 +5,45 @@ import NewsCard from "../components/Home/NewsCard";
 import ReactPaginate from "react-paginate";
 import { UserContext } from "../context/UserContex";
 import { NewsContext } from "../context/NewsContext";
-import AddNewsModal from "../components/Home/AddNewsModal";
 
 export default function HomePage() {
-  const { news } = useContext(NewsContext);
-  //Pagination
-  const [pageNumber, setPageNumber] = useState(0);
+  // Imports from NewsContext
+  const { news, handleNewsAdd } = useContext(NewsContext);
   // Logged in user
   const { loggedInUser } = useContext(UserContext);
-  //News type
+  //Pagination
+  const [pageNumber, setPageNumber] = useState(0);
+  //News type displayed
   const [newstype, setNewsType] = useState("general");
-  // Modal window
-  const [showNewNewsModal, setShowNewNewsModal] = useState(false);
 
   const newsPerPage = 5;
   const pagesVisited = pageNumber * newsPerPage;
 
-  const filtered = news.filter((news) => {
-    return news.type === newstype;
+  // Filtering news for students based on their study program and whether the news is published or not
+  const filteredStudents = news.filter((news) => {
+    return news.type === newstype && news.published === true;
   });
 
-  const displayNews = filtered
+  // Displaying published news for students
+  const displayNewsStudents = filteredStudents
     .slice(pagesVisited, pagesVisited + newsPerPage)
     .map((newsCard) => {
       return <NewsCard key={uuidv4()} newsCard={newsCard} />;
     });
 
-  const pageCount = Math.ceil(filtered.length / newsPerPage);
+  // Displaying all news so professors and admin can add, remove or edit, publish and unpublish news for students
+  const displayNewsProfAndAdmin = news
+  .slice(pagesVisited, pagesVisited + newsPerPage)
+  .map((newsCard) => {
+    return <NewsCard key={uuidv4()} newsCard={newsCard} />;
+  });
+
+
+  // Page count for displaying news for students
+  const pageCountStudents = Math.ceil(filteredStudents.length / newsPerPage);
+  // Page count for displaying news for šrpfessors and admin
+  const pageCountProfAndAdmin = Math.ceil(news.length / newsPerPage);
+
   const handlePageChange = ({ selected }) => {
     setPageNumber(selected);
   };
@@ -67,20 +79,16 @@ export default function HomePage() {
               <h3>{loggedInUser.study.toUpperCase()}</h3>
             </div>
             {loggedInUser.year > 5 && (
-              <button
-                onClick={() => {
-                  setShowNewNewsModal(true);
-                }}
-              >
-                Add News
-              </button>
+              <button onClick={handleNewsAdd}>Add News</button>
             )}
           </div>
-          {displayNews}
+          {loggedInUser.year < 6 ?
+           displayNewsStudents
+          : displayNewsProfAndAdmin}
           <ReactPaginate
             previousLabel={"<"}
             nextLabel={">"}
-            pageCount={pageCount}
+            pageCount={ loggedInUser.year < 6 ? pageCountStudents : pageCountProfAndAdmin}
             onPageChange={handlePageChange}
             containerClassName={"pagination-container"}
             previousLinkClassName={"previous-btn"}
@@ -88,12 +96,6 @@ export default function HomePage() {
             disabledClassName={"pagination-disabled"}
             activeClassName={"pagination-active"}
           />
-          {showNewNewsModal && (
-            <AddNewsModal
-              showNewNewsModal={showNewNewsModal}
-              setShowNewNewsModal={setShowNewNewsModal}
-            />
-          )}
         </div>
       </div>
     );
