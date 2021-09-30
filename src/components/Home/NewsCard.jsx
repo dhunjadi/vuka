@@ -8,9 +8,6 @@ export default function NewsCard({ newsCard }) {
   const { handleNewsDelete, handleNewsSelect} = useContext(NewsContext)
   const { title, text, id } = newsCard;
 
-
-
-
   return (
     <div className="news-card">
       <Link to={`/home/news/${id}`}>

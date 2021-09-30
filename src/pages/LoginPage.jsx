@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 export default function LoginPage() {
   
-  const {userList, setLoggedInUser} = useContext(UserContext)
+  const {users, setLoggedInUser} = useContext(UserContext)
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [showError, setShowError] = useState(false)
@@ -13,14 +13,13 @@ export default function LoginPage() {
 
   const handleLogin = (e) =>{
     e.preventDefault()
-    const found = (userList.find(user => user.email === email && user.password === password))
+    const found = (users.find(user => user.email === email && user.password === password))
     if(found){
       setLoggedInUser(found)
       history.push('/home')
     } else{
       setShowError(true)
     }
- 
   } 
 
   if (showError && email.length === 0) {
@@ -36,7 +35,7 @@ export default function LoginPage() {
         <form>
           <input type="text" placeholder="example@vuka.hr" value={email} onChange={(e)=> setEmail(e.target.value)} />
           <input type="password" placeholder="Password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
-          {showError ? <p className='login-error'>Incorrect Email or password</p> : null}
+          {showError && <p className='login-error'>Incorrect Email or password</p>}
           <button onClick={handleLogin} >Login</button>
         </form>
       </div>
