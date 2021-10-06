@@ -41,7 +41,7 @@ export default function HomePage() {
   // Page count for displaying news for students
   const pageCountStudents = Math.ceil(filteredStudents.length / newsPerPage);
 
-  // Page count for displaying news for šrpfessors and admin
+  // Page count for displaying news for professors and admin
   const pageCountProfAndAdmin = Math.ceil(news.length / newsPerPage);
 
   const handlePageChange = ({ selected }) => {

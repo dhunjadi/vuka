@@ -5,7 +5,6 @@ export default function ClassCard({ classCard }) {
   const { loggedInUser } = useContext(UserContext)
   const { title, semester, exam1, exam2, essay, presentation, ects } =
     classCard;
-
   return (
     <div className="class-card">
       <div className="class-card-title">
@@ -22,7 +21,7 @@ export default function ClassCard({ classCard }) {
         <p>Presentation: {presentation}</p>
       </div>
       {loggedInUser.year > 5 &&
-      <button>Edit</button>}
+      <button >Edit</button>}
     </div>
   );
 }

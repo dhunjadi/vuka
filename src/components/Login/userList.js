@@ -13,7 +13,7 @@ const userList = [
       classes: [
         {
           title: 'Basic Economics I',
-          semester: "1",
+          semester: 1,
           exam1: null,
           exam2: null,
           essay: null,
@@ -22,7 +22,7 @@ const userList = [
         },
         {
           title: 'Business Mathematics I',
-          semester: "1",
+          semester: 1,
           exam1: null,
           exam2: null,
           essay: null,
