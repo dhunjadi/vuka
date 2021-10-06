@@ -14,6 +14,7 @@ import { TaskContext } from './context/TaskContext';
 import { NewsContext } from './context/NewsContext';
 import EditTaskModal from './components/Tasks/EditTaskModal';
 import EditNewsModal from './components/Home/EditNewsModal'
+import StudentGradesCard from './components/Grades/StudentGradesCard';
 
 
 
@@ -32,6 +33,7 @@ export default function App() {
               <Route path="/library" exact component={LibraryPage} />
               <Route path="/library/book/:id" component={BookDetails} />
               <Route path="/grades" exact component={GradesPage} />
+              <Route path="/grades/student/:id" exact component={StudentGradesCard} />
               <Route path="/settings" exact component={SettingsPage} />
             </Switch>
           </Router>

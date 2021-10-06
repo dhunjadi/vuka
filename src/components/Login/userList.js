@@ -1,6 +1,6 @@
 const userList = [
     {
-      id: 1,
+      id: "1",
       email: "iivanic@vuka.hr",
       password: "vukastudent",
       fName: "Ivan",
@@ -8,26 +8,26 @@ const userList = [
       status: "student",
       studentStatus: "Full time",
       study: "hospitality",
-      year: 2,
+      year: "2",
       books : [],
       classes: [
         {
           title: 'Basic Economics I',
-          semester: 1,
+          semester: "1",
           exam1: null,
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 5
+          ects: "5"
         },
         {
           title: 'Business Mathematics I',
-          semester: 1,
+          semester: "1",
           exam1: null,
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 4
+          ects: "4"
         },
         {
           title: 'Computer Science in Business I',
@@ -36,7 +36,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 3
+          ects: "3"
         },
         {
           title: 'Fundamentals of Tourism',
@@ -45,7 +45,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 4
+          ects: "4"
         },
         {
           title: 'Introduction to Professional and Scientific Work',
@@ -54,7 +54,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 3
+          ects: "3"
         },
         {
           title: 'Physical Education (PE) (1/4)',
@@ -63,7 +63,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 0
+          ects: "0"
         },
         {
           title: 'Tourism Geography I',
@@ -72,7 +72,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 5
+          ects: "5"
         },
         {
           title: 'Basic Economics II',
@@ -81,7 +81,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 5
+          ects: "5"
         },
         {
           title: 'Business Law',
@@ -90,7 +90,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 3
+          ects: "3"
         },
         {
           title: 'Business Mathematics II',
@@ -99,7 +99,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 4
+          ects: "4"
         },
         {
           title: 'Computer Science in Business II',
@@ -108,7 +108,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 3
+          ects: "3"
         },
         {
           title: 'Physical Education (PE) (2/4)',
@@ -117,7 +117,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 0
+          ects: "0"
         },
         {
           title: 'Tourism Economics',
@@ -126,7 +126,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 4
+          ects: "4"
         },
         {
           title: 'Tourism Geography II',
@@ -135,7 +135,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 4
+          ects: "4"
         },
         {
           title: 'Business Statistics I',
@@ -144,7 +144,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 3
+          ects: "3"
         },
         {
           title: 'Fundamentals of Accounting I',
@@ -153,7 +153,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 4
+          ects: "4"
         },
         {
           title: 'Fundamentals of Entrepreneurship',
@@ -162,7 +162,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 4
+          ects: "4"
         },
         {
           title: 'Fundamentals of Marketing',
@@ -171,7 +171,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 4
+          ects: "4"
         },
         {
           title: 'Hospitality Management (1/2)',
@@ -180,7 +180,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 5
+          ects: "5"
         },
         {
           title: 'Physical Education (PE) (3/4)',
@@ -189,7 +189,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 0
+          ects: "0"
         },
         {
           title: 'Tourism and Environment',
@@ -198,7 +198,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 3
+          ects: "3"
         },
         {
           title: 'Business Statistics II',
@@ -207,7 +207,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 4
+          ects: "4"
         },
         {
           title: 'Entrepreneurship in Hospitality',
@@ -216,7 +216,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 5
+          ects: "5"
         },
         {
           title: 'Fundamentals of Accounting II',
@@ -225,7 +225,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 4
+          ects: "4"
         },
         {
           title: 'Hospitality Management (2/2)',
@@ -234,7 +234,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 5
+          ects: "5"
         },
         {
           title: 'Marketing in Hospitality',
@@ -243,7 +243,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 5
+          ects: "5"
         },
         {
           title: 'Physical Education (PE) (4/4)',
@@ -252,7 +252,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 0
+          ects: "0"
         },
         {
           title: 'Business Finances (1/2)',
@@ -261,7 +261,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 5
+          ects: "5"
         },
         {
           title: 'Evaluation of Cultural Heritage in Tourism',
@@ -270,7 +270,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 3
+          ects: "3"
         },
         {
           title: 'Fundamentals of Management',
@@ -279,7 +279,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 3
+          ects: "3"
         },
         {
           title: 'Fundamentals of Special Forms of Tourism',
@@ -288,7 +288,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 3
+          ects: "3"
         },
         {
           title: 'International Trade',
@@ -297,7 +297,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 3
+          ects: "3"
         },
         {
           title: 'Travel Agency Managment',
@@ -306,7 +306,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 3
+          ects: "3"
         },
         {
           title: 'Business Finances (2/2)',
@@ -315,7 +315,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 5
+          ects: "5"
         },
         {
           title: 'Final Thesis',
@@ -324,7 +324,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 6
+          ects: "6"
         },
         {
           title: 'Practical Work',
@@ -333,7 +333,7 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 7
+          ects: "7"
         },
         {
           title: 'Tourist Market Research',
@@ -342,32 +342,34 @@ const userList = [
           exam2: null,
           essay: null,
           presentation: null,
-          ects: 5
+          ects: "5"
         },
         
       ]
     },
     {
-      id: 2,
+      id: "2",
       email: "mmarkovic@vuka.hr",
       password: "vukaprof",
       fName: "Marko",
       lName: "Markovic",
       status: "professor",
       study: "professor",
-      year: 6,
-      books : []
+      year: "6",
+      books : [],
+      classes: []
     },
     {
-      id: 3,
+      id: "3",
       email: "admin@vuka.hr",
       password: "vukaadmin",
       fName: "Admin",
       lName: "Adminic",
       status: "admin",
       study: "admin",
-      year: 6,
-      books : []
+      year: "6",
+      books : [],
+      classes: []
     },
   ]
 

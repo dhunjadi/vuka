@@ -39,7 +39,8 @@ body {
 #settings,
 #tasks,
 #book-details,
-#news-details {
+#news-details,
+#student-grades-card {
   height: 100vh;
   background-color: var(--purple-dark);
   overflow-x: hidden;
