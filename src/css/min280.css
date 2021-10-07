@@ -651,26 +651,32 @@
     margin: 0;
   }
 
+  .class-card-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
   /* STUDENT CARD */
 
   .student-card{
-    width: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     background-color: var(--purple-light);
     border-radius: 10px;
     padding: 10px;
     margin: 10px 0;
-    display: flex;
   }
 
   .student-card a{
     color: var(--gold-light);
-  }
-
-  .student-info{
     display: flex;
     flex-direction: column;
-  }
-  
+    justify-content: space-evenly;
+    align-items: center;
+  }  
 
   /* SETTINGS PAGE */
 

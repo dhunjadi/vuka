@@ -666,22 +666,29 @@
     /* STUDENT CARD */
 
     .student-card{
-      width: auto;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
       background-color: var(--purple-light);
       border-radius: 10px;
       padding: 10px;
       margin: 10px 0;
       display: flex;
     }
+
+    .student-card:hover{
+   border: 2px solid var(--gold-light);
+    }
   
     .student-card a{
+      width: 100%;
       color: var(--gold-light);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
     }
   
-    .student-info{
-      display: flex;
-      flex-direction: column;
-    }
+   
 
   /* SETTINGS PAGE */
 
