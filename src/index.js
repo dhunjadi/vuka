@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { UserContextProvider } from './context/UserContex';
-import {NewsContextProvider} from './context/NewsContext'
-import {TaskContextProvider} from './context/TaskContext'
+import { NewsContextProvider } from './context/NewsContext'
+import { TaskContextProvider } from './context/TaskContext'
+import { GradesContextProvider } from './context/GradesContext'
 
 
 ReactDOM.render(
@@ -11,7 +12,9 @@ ReactDOM.render(
     <UserContextProvider>
       <NewsContextProvider>
         <TaskContextProvider>
-          <App />
+          <GradesContextProvider>
+            <App />
+          </GradesContextProvider>
         </TaskContextProvider>
     </NewsContextProvider>
     </UserContextProvider>

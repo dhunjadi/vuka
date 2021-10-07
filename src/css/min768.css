@@ -654,6 +654,26 @@
     margin: 10px;
   }
 
+    /* STUDENT CARD */
+
+    .student-card{
+      width: auto;
+      background-color: var(--purple-light);
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px 0;
+      display: flex;
+    }
+  
+    .student-card a{
+      color: var(--gold-light);
+    }
+  
+    .student-info{
+      display: flex;
+      flex-direction: column;
+    }
+
   /* SETTINGS PAGE */
 
   .student-info {

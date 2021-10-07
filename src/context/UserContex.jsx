@@ -6,6 +6,7 @@ export const UserContext = createContext();
 export const UserContextProvider = ({ children }) => {
   const [users] = useState(userList);
   const [loggedInUser, setLoggedInUser] = useState([]);
+  const [showEditGradesModal, setShowEditGradesModal] = useState(false);
 
   useEffect(() => {
     const data = localStorage.getItem("my-user");
@@ -18,8 +19,16 @@ export const UserContextProvider = ({ children }) => {
     localStorage.setItem("my-user", JSON.stringify(loggedInUser));
   });
 
+  const UserContextValue = {
+    users,
+    loggedInUser,
+    setLoggedInUser,
+    showEditGradesModal,
+    setShowEditGradesModal,
+  };
+
   return (
-    <UserContext.Provider value={{ users, loggedInUser, setLoggedInUser }}>
+    <UserContext.Provider value={UserContextValue}>
       {children}
     </UserContext.Provider>
   );

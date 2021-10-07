@@ -15,12 +15,17 @@ import { NewsContext } from './context/NewsContext';
 import EditTaskModal from './components/Tasks/EditTaskModal';
 import EditNewsModal from './components/Home/EditNewsModal'
 import StudentGradesCard from './components/Grades/StudentGradesCard';
+import EditGradesModal from './components/Grades/EditGradesModal';
+import { GradesContext } from './context/GradesContext'; 
+
 
 
 
 export default function App() {
   const { selectedTaskinfo } = useContext(TaskContext);
   const { selectedNewsinfo } = useContext(NewsContext)
+  const { selectedClass } = useContext(GradesContext)
+
   return (
     <div className='App'>
       <Router>
@@ -44,6 +49,10 @@ export default function App() {
             {selectedNewsinfo &&
             <EditNewsModal 
               selectedNewsinfo={selectedNewsinfo}
+            />}
+            {selectedClass &&
+              <EditGradesModal 
+            selectedClass={selectedClass}
             />}
     </div>
   )
