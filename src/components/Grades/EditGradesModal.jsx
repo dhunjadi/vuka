@@ -6,7 +6,7 @@ export default function EditGradesModal({ selectedClass }) {
   const { handleClassSelect, handleGradeChange } = useContext(GradesContext);
 
   const handleChange = (changes) => {
-    handleGradeChange(selectedClass.title, { ...selectedClass, ...changes });
+    handleGradeChange(title, { ...selectedClass, ...changes });
   };
 
   console.log(selectedClass)

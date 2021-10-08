@@ -4,7 +4,7 @@ import { UserContext } from "../../context/UserContex";
 import { NewsContext } from "../../context/NewsContext";
 
 export default function NewsCard({ newsCard }) {
-  const { title, text, id, type } = newsCard;
+  const { title, text, id, type, published } = newsCard;
   const { loggedInUser } = useContext(UserContext);
   const { handleNewsDelete, handleNewsSelect} = useContext(NewsContext)
  
@@ -13,8 +13,11 @@ export default function NewsCard({ newsCard }) {
     <div className="news-card">
       <Link to={`/home/news/${id}`}>
         <h1 className="news-card-title">{title}</h1>
-        {loggedInUser.year > 5 &&
-          <span>Type: {type.charAt(0).toUpperCase() + type.slice(1)}</span>
+        {loggedInUser.year > 5 && 
+        <>
+          <span>Type: {type.charAt(0).toUpperCase() + type.slice(1)}</span> <br />
+          <span>{published ? 'Published' : 'Unpublished'}</span>
+          </>
         }
         <p className="news-card-text">{text.substring(0, 50) + "..."}</p>
       </Link>
