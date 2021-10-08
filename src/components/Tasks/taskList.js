@@ -6,7 +6,7 @@ const  taskList = [
       study: "hospitality",
       subject: "economics",
       year: 1,
-      published: true,
+      status: "published",
     },
     {
       id: 2,
@@ -15,7 +15,7 @@ const  taskList = [
       study: "hospitality",
       subject: "tourism",
       year: 1,
-      published: true,
+      status: "published",
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ const  taskList = [
       study: "mechatronics",
       subject: "mechanics",
       year: 1,
-      published: true,
+      status: "published",
     },
     {
       id: 4,
@@ -33,7 +33,7 @@ const  taskList = [
       study: "mechatronics",
       subject: "mechanics",
       year: 1,
-      published: true,
+      status: "published",
     },
     {
       id: 5,
@@ -42,7 +42,7 @@ const  taskList = [
       study: "hospitality",
       subject: "economics",
       year: 3,
-      published: true,
+      status: "published",
     },
     {
       id: 6,
@@ -51,7 +51,7 @@ const  taskList = [
       study: "hospitality",
       subject: "economics",
       year: 2,
-      published: true,
+      status: "published",
     },
     {
       id: 7,
@@ -60,7 +60,7 @@ const  taskList = [
       study: "mechatronics",
       subject: "mechanics",
       year: 1,
-      published: true,
+      status: "published",
     },
     {
       id: 8,
@@ -69,7 +69,7 @@ const  taskList = [
       study: "mechatronics",
       subject: "mechanics",
       year: 3,
-      published: true,
+      status: "published",
     },
     {
       id: 9,
@@ -78,7 +78,7 @@ const  taskList = [
       study: "mechatronics",
       subject: "mechanics",
       year: 2,
-      published: true,
+      status: "published",
     },
     {
       id: 10,
@@ -87,7 +87,7 @@ const  taskList = [
       study: "hospitality",
       subject: "economics",
       year: 1,
-      published: true,
+      status: "published",
     },
   ]
 

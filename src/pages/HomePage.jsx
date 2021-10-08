@@ -21,7 +21,7 @@ export default function HomePage() {
 
   // Filtering news for students based on their study program and whether the news is published or not
   const filteredStudents = news.filter((news) => {
-    return news.type === newstype && news.published === true;
+    return news.type === newstype && news.status === "published";
   });
 
   // Displaying published news for students

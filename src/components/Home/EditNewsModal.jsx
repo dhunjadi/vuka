@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { NewsContext } from "../../context/NewsContext";
 
 export default function EditNews({ selectedNewsinfo }) {
-  const { title, type, text, id, published } = selectedNewsinfo;
+  const { title, type, text, id, status } = selectedNewsinfo;
   const { handleNewsChange, handleNewsSelect } = useContext(NewsContext);
 
   const handleChange = (changes) => {
@@ -35,11 +35,11 @@ export default function EditNews({ selectedNewsinfo }) {
           onChange={(e) => handleChange({ text: e.target.value })}
         ></textarea>
         <select
-          value={published}
-          onChange={(e) => handleChange({ published: e.target.value })}
+          value={status}
+          onChange={(e) => handleChange({ status: e.target.value })}
         >
-          <option value={true}>True</option>
-          <option value={false}>False</option>
+          <option value="published">Published</option>
+          <option value="unpublished">Unpublished</option>
         </select>
       </div>
       <div className="edit-news-modal-btns">

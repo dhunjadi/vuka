@@ -17,7 +17,7 @@ export const NewsContextProvider = ({ children }) => {
       title: 'New News Title',
       text: 'New News Text',
       type: 'general',
-      published: false
+      status: "unpublished"
     }
     setNews([...news, newNews])
   }

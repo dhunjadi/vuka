@@ -14,7 +14,7 @@ export default function TasksPage() {
     return (
       task.study === loggedInUser.study &&
       task.year <= loggedInUser.year &&
-      task.published === true
+      task.status === "published"
     );
   });
 

@@ -15,10 +15,10 @@ export const TaskContextProvider = ({ children }) => {
       id: uuidv4(),
       title: "New Task Title",
       text: "New Task Text",
-      study: "New Task Study",
-      subject: "New Task Subject",
-      year: "New Task Year",
-      published: false,
+      study: "",
+      subject: "",
+      year: "",
+      status: "unpublished",
     };
     setTasks([...tasks, newTask]);
   };

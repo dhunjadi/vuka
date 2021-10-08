@@ -4,7 +4,7 @@ import { UserContext } from "../../context/UserContex";
 import { NewsContext } from "../../context/NewsContext";
 
 export default function NewsCard({ newsCard }) {
-  const { title, text, id, type, published } = newsCard;
+  const { title, text, id, type, status } = newsCard;
   const { loggedInUser } = useContext(UserContext);
   const { handleNewsDelete, handleNewsSelect} = useContext(NewsContext)
  
@@ -16,7 +16,7 @@ export default function NewsCard({ newsCard }) {
         {loggedInUser.year > 5 && 
         <>
           <span>Type: {type.charAt(0).toUpperCase() + type.slice(1)}</span> <br />
-          <span>{published ? 'Published' : 'Unpublished'}</span>
+          <span>{status === "published" ? 'Published' : 'Unpublished'}</span>
           </>
         }
         <p className="news-card-text">{text.substring(0, 50) + "..."}</p>
