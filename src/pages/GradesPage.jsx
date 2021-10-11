@@ -4,12 +4,15 @@ import { UserContext } from "../context/UserContex";
 import ClassCard from "../components/Grades/ClassCard";
 import StudentCard from "../components/Grades/StudentCard";
 import { v4 as uuidv4 } from "uuid";
+import gradesList from "../components/Grades/gradesList";
 
 export default function GradesPage() {
   const { loggedInUser, users } = useContext(UserContext);
   const [currentSemester, setCurrentSemester] = useState(1);
 
-  const filtered = loggedInUser.classes.filter((element) => {
+  const found = gradesList.find(el => el.id === loggedInUser.id)
+
+  const filtered = found.classes.filter((element) => {
     return element.semester === currentSemester;
   });
 

@@ -3,8 +3,8 @@ import { GradesContext } from "../../context/GradesContext";
 import { UserContext } from "../../context/UserContex";
 
 export default function ClassCard({ classCard }) {
-  const { loggedInUser,  } = useContext(UserContext);
-  const { handleClassSelect } = useContext(GradesContext);
+  const { loggedInUser } = useContext(UserContext);
+  const { handleClassSelect } = useContext(GradesContext)
   const { title, semester, exam1, exam2, essay, presentation, ects } =
     classCard;
 
@@ -27,7 +27,7 @@ export default function ClassCard({ classCard }) {
       </div>
       {loggedInUser.year > 5 && (
         <div className="class-card-btns">
-          <button onClick={() => handleClassSelect(title)}>Edit</button>
+          <button onClick={()=> handleClassSelect(title)}>Edit</button>
         </div>
       )}
     </div>

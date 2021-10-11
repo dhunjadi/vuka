@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import "./css/app.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoginPage from './pages/LoginPage';
@@ -15,8 +15,10 @@ import { NewsContext } from './context/NewsContext';
 import EditTaskModal from './components/Tasks/EditTaskModal';
 import EditNewsModal from './components/Home/EditNewsModal'
 import StudentGradesCard from './components/Grades/StudentGradesCard';
-import EditGradesModal from './components/Grades/EditGradesModal';
-import { GradesContext } from './context/GradesContext'; 
+import { GradesContext } from './context/GradesContext';
+import EditGradesModal from './components/Grades/EditGradesModal'
+
+
 
 
 
@@ -50,10 +52,10 @@ export default function App() {
             <EditNewsModal 
               selectedNewsinfo={selectedNewsinfo}
             />}
-            {selectedClass &&
-              <EditGradesModal 
-            selectedClass={selectedClass}
-            />}
+         {selectedClass &&
+         <EditGradesModal 
+           selectedClass={selectedClass}
+         />}
     </div>
   )
 }

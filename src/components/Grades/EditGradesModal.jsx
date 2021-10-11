@@ -1,16 +1,14 @@
 import React, { useContext } from "react";
 import { GradesContext } from "../../context/GradesContext";
 
-export default function EditGradesModal({ selectedClass }) {
-  const { title, exam1, exam2, essay, presentation } = selectedClass 
-  const { handleClassSelect, handleGradeChange } = useContext(GradesContext);
+export default function EditGradesModal({selectedClass}) {
+  const { title, exam1, exam2, essay, presentation } = selectedClass
+  const { handleGradeChange, handleClassSelect } = useContext(GradesContext)
 
   const handleChange = (changes) => {
     handleGradeChange(title, { ...selectedClass, ...changes });
   };
-
-  console.log(selectedClass)
-
+  
   return (
     <div className="modal">
       <div className="edit-news-modal-title">
@@ -74,7 +72,7 @@ export default function EditGradesModal({ selectedClass }) {
       </div>
       <div className="edit-news-modal-input"></div>
       <div className="edit-news-modal-btns">
-        <button onClick={() => handleClassSelect(undefined)}>OK</button>
+        <button onClick={()=> handleClassSelect(undefined)}>OK</button>
       </div>
     </div>
   );

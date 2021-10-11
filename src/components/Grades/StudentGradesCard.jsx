@@ -3,22 +3,23 @@ import userList from "../Login/userList";
 import Navbar from "../Navbar/Navbar";
 import ClassCard from "./ClassCard";
 import { v4 as uuidv4 } from "uuid";
+import gradesList from "./gradesList";
 import { GradesContext } from '../../context/GradesContext'
 
 export default function StudentGradesCard(props) {
+
+  const { setStudentID } = useContext(GradesContext)
   const student = userList.find(
     (element) => element.id === props.match.params.id
   );
-  const { setGrades } = useContext(GradesContext)
+  const foundClassList = gradesList.find((el) => el.id === student.id);
 
-  useEffect(()=>{
-    setGrades([])
-    setGrades(student.classes)
-  }, [setGrades, student.classes])
-  
+useEffect(()=>{
+  setStudentID(student.id)
+}, [setStudentID, student.id])
 
-  const displayClasses = student.classes.map((classCard) => {
-    return <ClassCard key={uuidv4()} classCard={classCard} student={student}/>;
+  const displayClasses = foundClassList.classes.map((classCard) => {
+    return <ClassCard key={uuidv4()} classCard={classCard} />;
   });
 
   return (
